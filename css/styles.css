@@ -1,0 +1,594 @@
+/* -----------------------------
+   1) RESETEO + DISEÑO
+   ----------------------------- */
+
+:root {
+  /* Variables CSS globales */
+  --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --bg: #ffffff;
+  --bg-soft: #f7f8fa;
+  --text: #222;
+  --muted: #6b7280;
+  --primary: #0d6efd;
+  --accent: #198754;
+  --danger: #dc3545;
+  --border: #e5e7eb;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --radius: 14px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --maxw-container: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  /* Reset de box-sizing */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0; /* Sin margen externo */
+  padding: 0; /* Sin padding global */
+  color: var(--text);
+  background: var(--bg);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  /* Normalización de imágenes */
+  max-width: 100%;
+  display: block;
+}
+
+.visually-hidden {
+  /* Clase utilitaria para accesibilidad */
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap; /* Evita salto de línea */
+  border: 0;
+}
+
+/* -----------------------------
+   2) CONTENEDOR + SECCIONES
+   ----------------------------- */
+
+.container {
+  max-width: var(--maxw-container);
+}
+
+.section {
+  padding: var(--space-6) 0;
+}
+
+.section__title {
+  /* Títulos de sección */
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.section__subtitle {
+  /* Subtítulo informativo */
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ----------------------------------
+   3) NAVBAR (Bootstrap + ajustes)
+   ---------------------------------- */
+
+.site-header .navbar {
+  /* Barra de navegación */
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand img {
+  /* Logo en el header */
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.navbar .nav-link {
+  /* Estilo de enlaces del menú */
+  font-weight: 500;
+}
+
+.navbar .form-control {
+  /* Campo del buscador */
+  min-width: 220px;
+}
+
+.navbar .nav-link.fs-5 {
+  /* Íconos 👤🛒 a la derecha */
+  line-height: 1;
+}
+
+/* -----------------------------
+   4) HERO / PORTADA
+   ----------------------------- */
+
+.hero {
+  /* Banda de portada */
+  padding: var(--space-5) 0 var(--space-6);
+  background: linear-gradient(180deg, #fff, #fafafa);
+}
+
+.hero__banner {
+  /* Contenedor de la imagen */
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.hero__img {
+  /* Imagen responsive */
+  width: 100%;
+  height: clamp(220px, 34vw, 420px);
+  object-fit: cover;
+}
+
+/* -----------------------------------
+   5) LAYOUTS DE PÁGINA (grid/flex)
+   ----------------------------------- */
+
+.page {
+  /* Región principal */
+  padding: var(--space-6) 0;
+}
+
+.page__header {
+  /* Encabezado de página */
+  margin-bottom: var(--space-5);
+}
+
+.page__title {
+  /* Título principal */
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.page-grid {
+  /* Grid: sidebar filtros + listado */
+  display: grid; /* Activa grid layout */
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-5);
+}
+
+/* -----------------------------
+   6) FILTROS (sidebar)
+   ----------------------------- */
+
+.filters {
+  /* Contenedor de filtros */
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  align-self: start;
+}
+
+.filters__form {
+  /* Formulario de filtros */
+  display: grid;
+  gap: var(--space-4);
+}
+
+.filters__group {
+  /* Grupo de filtros */
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filters__legend {
+  /* Título de cada grupo */
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+}
+
+.filters input {
+  /* Inputs de filtros */
+  margin-right: 0.5rem;
+}
+
+.filters .btn {
+  /* Botonera de filtros */
+  border-radius: 999px;
+}
+
+/* ----------------------------------
+   7) LISTADOS Y TARJETAS (grid)
+   ---------------------------------- */
+
+.listing {
+  /* Contenedor de listados */
+  min-height: 200px;
+}
+
+.product-grid {
+  /* Grid de productos de catálogo/promos/packs */
+  display: grid; /* Activa CSS Grid */
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 1200px) {
+  /* Desktop amplio */
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  } /* 4 por fila */
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* Tablet */
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  } /* 3 por fila */
+}
+
+@media (max-width: 767px) {
+  /* Móvil */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  } /* 2 por fila */
+}
+
+.card-product,                                  /* Tarjeta de catálogo/promos/packs */
+.card-home {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.card-product__media,
+.card-home__media {
+  /* Contenedor de la imagen */
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: calc(var(--radius) - 4px);
+  overflow: hidden;
+  display: block;
+}
+
+.card-product__media img,
+.card-home__media img {
+  /* Imagen dentro de la tarjeta */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+
+.card-product__title {
+  /* Título de tarjeta */
+  font-size: 1rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.card-home__meta,
+.card-product .card-home__meta {
+  /* datos debajo del título */
+  display: grid;
+  gap: 0.25rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: -0.25rem 0 0.25rem 0;
+}
+
+.meta-row {
+  display: block;
+}
+
+/* ----------------------------------
+   8) CARRUSELES 
+   ---------------------------------- */
+
+.carousel {
+  /* Envoltura del carrusel */
+  position: relative;
+}
+
+.carousel__track {
+  /* Pista deslizante horizontal */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min(260px, 35vw);
+  gap: var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--space-2);
+}
+
+.carousel__item {
+  /* item del carrusel */
+  scroll-snap-align: start;
+}
+
+@media (max-width: 500px) {
+  /* Media de componente  */
+  .carousel__track {
+    grid-auto-columns: 45vw;
+  } /* Se ven 2 cards en móvil */
+}
+
+/* ----------------------------------
+   9) ABOUT (bloques transparentes)
+   ---------------------------------- */
+
+.about-grid {
+  /* Grilla de 3 bloques */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.about-card {
+  /* Card genérica de About */
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  background: var(--bg);
+}
+
+.about-card--ghost {
+  /* Variante solicitada “transparente” */
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.about-card__header {
+  /* Encabezado de bloque */
+  margin-bottom: var(--space-2);
+}
+
+.about-card__title {
+  /* Título de bloque */
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.about-card__text {
+  /* Párrafos de About */
+  margin: 0;
+  color: var(--text);
+}
+
+.about-method {
+  /* Sección “Nuestro método” */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.about-method__img {
+  /* Imagen de método */
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* ----------------------------------
+   10) CONTACTO (redes + formulario)
+   ---------------------------------- */
+
+.section--contact {
+  /* Sección destacada de contacto */
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.contact {
+  /* Contenedor del bloque */
+  display: grid;
+  gap: var(--space-5);
+}
+
+.social-list {
+  /* Lista de redes sociales */
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social-list__icon {
+  /* Iconos de redes */
+  width: 38px;
+  height: 38px;
+  filter: grayscale(15%);
+}
+
+.form {
+  /* Formulario de contacto */
+  display: grid;
+  gap: var(--space-4);
+}
+
+.form__row {
+  /* Fila del formulario */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.form__field {
+  /* Contenedor de cada campo */
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form__field--full {
+  /* Campo que ocupa todo el ancho */
+  grid-column: 1 / -1;
+}
+
+.form__label {
+  /* Etiquetas de campos */
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.form__input {
+  /* Estilos comunes de inputs/textarea */
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem 0.8rem;
+  outline: none;
+  background: #fff;
+}
+
+.form__input:focus {
+  /* Estado focus accesible */
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+.form__actions {
+  /* Contenedor de botones */
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+}
+
+/* ----------------------------------
+   11) FOOTER (2 columnas)
+   ---------------------------------- */
+
+.footer {
+  /* Pie de página */
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  padding: var(--space-6) 0;
+}
+
+.footer__cols {
+  /* Contenedor de columnas */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.footer__link {
+  /* Enlaces del pie */
+  color: var(--text);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline; /* Subraya al pasar */
+}
+
+/* ----------------------------------
+   12) UTILITARIOS VISUALES
+   ---------------------------------- */
+
+.badge.bg-success {
+  /* Ahorro en tarjetas (verde) */
+  background-color: var(--accent) !important;
+}
+
+.btn-success {
+  /* Botón “Agregar” coherente */
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-success:hover {
+  /* Hover del CTA */
+  filter: brightness(0.95);
+}
+
+/* ----------------------------------
+   13) MEDIA QUERIES ≤ 500px
+   ---------------------------------- */
+
+@media (max-width: 500px) {
+  .navbar .form-control {
+    /* Buscador en nav */
+    min-width: 140px; /* Reduce ancho mínimo */
+  }
+
+  .hero__img {
+    /* Alto de portada en móvil */
+    height: 220px;
+  }
+
+  .page-grid {
+    /* filtros + listado */
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    /* Sidebar */
+    position: relative;
+  }
+
+  .product-grid {
+    /* Grilla de cards */
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .card-product,
+  .card-home {
+    /* Tarjetas en móvil */
+    padding: var(--space-3);
+  }
+
+  .card-product__title {
+    /* Título en tarjeta móvil */
+    font-size: 0.98rem;
+  }
+
+  .about-grid {
+    /* Grid de about */
+    grid-template-columns: 1fr;
+  }
+
+  .about-method {
+    /* Método  */
+    grid-template-columns: 1fr;
+  }
+
+  .form__row {
+    /* Filas de formulario */
+    grid-template-columns: 1fr;
+  }
+
+  .footer__cols {
+    /* Footer en móvil */
+    grid-template-columns: 1fr;
+  }
+}

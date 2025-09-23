@@ -1,0 +1,226 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Decanté · Decants de Perfumes</title> 
+  <link rel="preconnect" href="https://cdn.jsdelivr.net"> <!-- Optimización de conexión -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> <!-- CSS de Bootstrap -->
+  <link rel="stylesheet" href="./css/styles.css"> 
+
+</head> 
+
+<body> 
+
+  <!-- =========================================================
+       HEADER + NAVBAR UNIFICADO
+       ========================================================= -->
+  <header class="site-header"> 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+      <div class="container"> 
+        <a class="navbar-brand d-flex align-items-center gap-2" href="./index.html">
+          <img src="./assets/images/logo-transparente.png" alt="Logo Decanté" width="48" height="48" loading="lazy"> <!-- Logo -->
+          <span class="fw-semibold">Decanté</span> 
+        </a> 
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegación"> <!-- Botón hamburguesa en móvil -->
+          <span class="navbar-toggler-icon"></span> <!-- Ícono de Bootstrap -->
+        </button> 
+
+        <div class="collapse navbar-collapse" id="navMain"> <!-- Contenedor colapsable del menú -->
+          <ul class="navbar-nav mx-auto gap-lg-3">
+            <li class="nav-item"> 
+              <a class="nav-link" href="./pages/about.html">Nosotros</a> <!-- Link a la página Nosotros -->
+            </li> 
+
+            <li class="nav-item dropdown"> <!-- Catálogo con submenú -->
+              <a class="nav-link dropdown-toggle" href="./pages/catalog.html" role="button" data-bs-toggle="dropdown">Catálogo</a> 
+              <ul class="dropdown-menu"> 
+                <li><a class="dropdown-item" href="./pages/catalog.html?g=hombre">Hombre</a></li> 
+                <li><a class="dropdown-item" href="./pages/catalog.html?g=mujer">Mujer</a></li> 
+                <li><a class="dropdown-item" href="./pages/catalog.html?g=todos">Todos</a></li> 
+              </ul> 
+            </li> 
+
+            <li class="nav-item"><a class="nav-link" href="./pages/packs.html">Packs</a></li> <!-- Link a Packs -->
+            <li class="nav-item"><a class="nav-link" href="./pages/promotions.html">Promociones</a></li> <!-- Link a Promociones -->
+          </ul> 
+
+          <form class="d-flex align-items-center gap-2" role="search" method="get" action="./index.html"> <!-- Buscador que consulta en la misma página -->
+            <input class="form-control" type="search" name="q" placeholder="🔎 Buscar..." aria-label="Buscar" autocomplete="off"> 
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+            <a class="nav-link fs-5" href="#" aria-label="Ingresar o registrarse" title="Ingresar / Registrarse">👤</a> <!-- Ícono de login  -->
+            <a class="nav-link fs-5" href="./pages/cart.html" aria-label="Ir al carrito" title="Carrito">🛒</a> <!-- Ícono del carrito -->
+          </form> 
+        </div> 
+      </div> 
+    </nav>
+  </header> 
+
+  <!-- =========================================================
+       HERO 
+       ========================================================= -->
+  <section class="hero"> 
+    <div class="container"> 
+      <figure class="hero__banner"> 
+        <img src="./assets/images/portada.webp" alt="Fragancias de lujo en formato decant" class="hero__img"> <!-- Imagen portada -->
+        <figcaption class="visually-hidden">Descubre decants de tus perfumes favoritos</figcaption>
+      </figure> 
+    </div> 
+  </section> 
+
+  <!-- =========================================================
+       CARRUSEL: MÁS VENDIDOS
+       ========================================================= -->
+  <section class="section"> 
+    <div class="container"> 
+      <h2 class="section__title">Más vendidos</h2> 
+      <div class="carousel" aria-label="Carrusel de más vendidos"> <!-- Contenedor del carrusel -->
+        <div class="carousel__track"> 
+          <!-- Tarjeta 1 -->
+          <article class="carousel__item"> 
+            <div class="card-home"> <!-- Card del producto -->
+              <a class="card-home__media" href="#"> 
+                <img src="./assets/images/decant.png" alt="Nombre Perfume 1 · 10 ml"> 
+              </a> 
+              <h3 class="card-product__title">Nombre Perfume 1</h3> <!-- Nombre del decant -->
+              <p class="card-home__meta"> 
+                <span class="meta-row"><strong>Marca:</strong> Marca 1</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 10 ml</span> 
+                <span class="meta-row"><strong>Género:</strong> unisex</span> 
+              </p> 
+              <div class="d-flex justify-content-between align-items-center"> 
+                <span><s class="text-muted">$14.99</s> <strong>$12.99</strong></span> <!-- Precio con oferta -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> 
+              </div> 
+            </div> 
+          </article> 
+
+          <!-- Tarjetas 2 a 10 con el mismo patrón -->
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Nombre Perfume 2 · 5 ml"></a><h3 class="card-product__title">Nombre Perfume 2</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 2</span><span class="meta-row"><strong>Tamaño:</strong> 5 ml</span><span class="meta-row"><strong>Género:</strong> mujer</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$12.99</s> <strong>$10.99</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Nombre Perfume 3 · 3 ml"></a><h3 class="card-product__title">Nombre Perfume 3</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 3</span><span class="meta-row"><strong>Tamaño:</strong> 3 ml</span><span class="meta-row"><strong>Género:</strong> hombre</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$11.99</s> <strong>$9.99</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Nombre Perfume 4 · 10 ml"></a><h3 class="card-product__title">Nombre Perfume 4</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 4</span><span class="meta-row"><strong>Tamaño:</strong> 10 ml</span><span class="meta-row"><strong>Género:</strong> hombre</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$15.49</s> <strong>$12.79</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Nombre Perfume 5 · 5 ml"></a><h3 class="card-product__title">Nombre Perfume 5</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 5</span><span class="meta-row"><strong>Tamaño:</strong> 5 ml</span><span class="meta-row"><strong>Género:</strong> unisex</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$12.49</s> <strong>$10.49</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Nombre Perfume 6 · 3 ml"></a><h3 class="card-product__title">Nombre Perfume 6</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 6</span><span class="meta-row"><strong>Tamaño:</strong> 3 ml</span><span class="meta-row"><strong>Género:</strong> mujer</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$11.49</s> <strong>$9.49</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Nombre Perfume 7 · 10 ml"></a><h3 class="card-product__title">Nombre Perfume 7</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 7</span><span class="meta-row"><strong>Tamaño:</strong> 10 ml</span><span class="meta-row"><strong>Género:</strong> mujer</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$14.49</s> <strong>$12.19</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Nombre Perfume 8 · 5 ml"></a><h3 class="card-product__title">Nombre Perfume 8</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 8</span><span class="meta-row"><strong>Tamaño:</strong> 5 ml</span><span class="meta-row"><strong>Género:</strong> hombre</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$12.19</s> <strong>$10.19</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Nombre Perfume 9 · 3 ml"></a><h3 class="card-product__title">Nombre Perfume 9</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 9</span><span class="meta-row"><strong>Tamaño:</strong> 3 ml</span><span class="meta-row"><strong>Género:</strong> unisex</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$11.19</s> <strong>$9.19</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Nombre Perfume 10 · 10 ml"></a><h3 class="card-product__title">Nombre Perfume 10</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 10</span><span class="meta-row"><strong>Tamaño:</strong> 10 ml</span><span class="meta-row"><strong>Género:</strong> hombre</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$15.19</s> <strong>$12.99</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+        </div> 
+      </div> 
+    </div> 
+  </section> 
+
+  <!-- =========================================================
+       CARRUSEL: OFERTAS 
+       ========================================================= -->
+  <section class="section"> <!-- Nueva sección para Ofertas -->
+    <div class="container"> 
+      <h2 class="section__title">Ofertas</h2> 
+      <div class="carousel" aria-label="Carrusel de ofertas"> 
+        <div class="carousel__track"> 
+          <!-- Tarjetas 2 a 10  “Más vendidos” -->
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 1 · 10 ml"></a><h3 class="card-product__title">Promo 1</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 1</span><span class="meta-row"><strong>Tamaño:</strong> 10 ml</span><span class="meta-row"><strong>Género:</strong> unisex</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$15.99</s> <strong>$12.79</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 2 · 5 ml"></a><h3 class="card-product__title">Promo 2</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 2</span><span class="meta-row"><strong>Tamaño:</strong> 5 ml</span><span class="meta-row"><strong>Género:</strong> mujer</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$12.49</s> <strong>$10.24</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 3 · 3 ml"></a><h3 class="card-product__title">Promo 3</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 3</span><span class="meta-row"><strong>Tamaño:</strong> 3 ml</span><span class="meta-row"><strong>Género:</strong> hombre</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$10.99</s> <strong>$8.57</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 4 · 10 ml"></a><h3 class="card-product__title">Promo 4</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 4</span><span class="meta-row"><strong>Tamaño:</strong> 10 ml</span><span class="meta-row"><strong>Género:</strong> mujer</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$16.49</s> <strong>$14.01</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 5 · 5 ml"></a><h3 class="card-product__title">Promo 5</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 5</span><span class="meta-row"><strong>Tamaño:</strong> 5 ml</span><span class="meta-row"><strong>Género:</strong> unisex</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$12.49</s> <strong>$10.49</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 6 · 3 ml"></a><h3 class="card-product__title">Promo 6</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 6</span><span class="meta-row"><strong>Tamaño:</strong> 3 ml</span><span class="meta-row"><strong>Género:</strong> mujer</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$11.49</s> <strong>$9.99</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 7 · 10 ml"></a><h3 class="card-product__title">Promo 7</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 7</span><span class="meta-row"><strong>Tamaño:</strong> 10 ml</span><span class="meta-row"><strong>Género:</strong> hombre</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$15.99</s> <strong>$12.79</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 8 · 5 ml"></a><h3 class="card-product__title">Promo 8</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 8</span><span class="meta-row"><strong>Tamaño:</strong> 5 ml</span><span class="meta-row"><strong>Género:</strong> hombre</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$12.19</s> <strong>$10.19</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 9 · 3 ml"></a><h3 class="card-product__title">Promo 9</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 9</span><span class="meta-row"><strong>Tamaño:</strong> 3 ml</span><span class="meta-row"><strong>Género:</strong> unisex</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$10.99</s> <strong>$8.79</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+          <article class="carousel__item"><div class="card-home"><a class="card-home__media" href="#"><img src="./assets/images/decant.png" alt="Promo 10 · 10 ml"></a><h3 class="card-product__title">Promo 10</h3><p class="card-home__meta"><span class="meta-row"><strong>Marca:</strong> Marca 10</span><span class="meta-row"><strong>Tamaño:</strong> 10 ml</span><span class="meta-row"><strong>Género:</strong> mujer</span></p><div class="d-flex justify-content-between align-items-center"><span><s class="text-muted">$16.19</s> <strong>$13.49</strong></span><button class="btn btn-sm btn-success" type="button">Agregar</button></div></div></article>
+        </div> 
+      </div> 
+    </div> 
+  </section>
+
+  <!-- =========================================================
+       BLOQUE CONTACTO (redes + formulario)
+       ========================================================= -->
+  <section class="section section--contact"> 
+    <div class="container"> 
+      <header class="text-center mb-4"> 
+        <h2 class="section__title">¡Contáctanos!</h2> 
+        <p class="section__subtitle">Comunícate por nuestras redes sociales o envíanos un mensaje</p>
+      </header> 
+
+      <div class="contact"> 
+        <ul class="social-list" aria-label="Redes Sociales"> 
+          <li><a class="social-list__link" href="#" aria-label="WhatsApp"><img src="./assets/images/whatsapp.png" alt="WhatsApp" class="social-list__icon"></a></li> <!-- WhatsApp -->
+          <li><a class="social-list__link" href="#" aria-label="Facebook"><img src="./assets/images/facebook.png" alt="Facebook" class="social-list__icon"></a></li> <!-- Facebook -->
+          <li><a class="social-list__link" href="#" aria-label="Instagram"><img src="./assets/images/instagram.png" alt="Instagram" class="social-list__icon"></a></li> <!-- Instagram -->
+          <li><a class="social-list__link" href="#" aria-label="TikTok"><img src="./assets/images/tik-tok.png" alt="TikTok" class="social-list__icon"></a></li> <!-- TikTok -->
+          <li><a class="social-list__link" href="mailto:contacto@decante.com" aria-label="Enviar correo"><img src="./assets/images/logo-negro.PNG" alt="Email" class="social-list__icon"></a></li>
+        </ul>
+
+        <form class="form" method="post" action="#"> 
+          <div class="form__row"> 
+            <div class="form__field"> 
+              <label class="form__label" for="nombre">Nombre</label> 
+              <input class="form__input" type="text" id="nombre" name="nombre" placeholder="Tu nombre"> 
+            </div> 
+            <div class="form__field"> 
+              <label class="form__label" for="apellido">Apellido</label> 
+              <input class="form__input" type="text" id="apellido" name="apellido" placeholder="Tu apellido"> 
+            </div> 
+          </div> 
+
+          <div class="form__row"> <!-- Fila de Email -->
+            <div class="form__field form__field--full"> 
+              <label class="form__label" for="email">Correo electrónico</label> 
+              <input class="form__input" type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com"> 
+            </div> 
+          </div> 
+
+          <div class="form__row"> <!-- Fila de Mensaje -->
+            <div class="form__field form__field--full"> 
+              <label class="form__label" for="mensaje">Mensaje</label> 
+              <textarea class="form__input" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué buscas"></textarea>
+            </div> 
+          </div>
+
+          <div class="form__actions"> 
+            <button class="btn btn-primary" type="submit">Enviar</button> <!-- Enviar -->
+          </div> 
+        </form>
+      </div> 
+    </div>
+  </section> 
+
+  <!-- =========================================================
+       FOOTER (Información / Legal)
+       ========================================================= -->
+  <footer class="footer"> <!-- Pie de página unificado -->
+    <div class="container"> 
+      <div class="footer__cols"> 
+        <section class="footer__col"> 
+          <h2 class="h6 text-uppercase mb-3">Información</h2> 
+          <ul class="list-unstyled m-0"> 
+            <li><a class="footer__link" href="./pages/about.html">Sobre Nosotros</a></li> 
+            <li><a class="footer__link" href="./pages/catalog.html">Catálogo</a></li> 
+            <li><a class="footer__link" href="./pages/packs.html">Packs</a></li> 
+            <li><a class="footer__link" href="./pages/promotions.html">Promociones</a></li> 
+            <li><a class="footer__link" href="./pages/cart.html">Carrito</a></li> 
+          </ul> 
+        </section> 
+
+        <section class="footer__col"> <!-- Columna Legal -->
+          <h2 class="h6 text-uppercase mb-3">Legal</h2> 
+          <ul class="list-unstyled m-0"> 
+            <li><a class="footer__link" href="./pages/privacy.html">Política de Privacidad</a></li>
+            <li><a class="footer__link" href="./pages/privacy.html#cookies">Política de Cookies</a></li> 
+            <li><a class="footer__link" href="./pages/privacy.html#devoluciones">Política de Devoluciones</a></li> 
+            <li><a class="footer__link" href="./pages/privacy.html#terminos">Términos y Condiciones</a></li> 
+          </ul> 
+        </section> 
+      </div> 
+
+      <p class="text-center small m-0 pt-3">Decanté.com © 2025 - Todos los derechos reservados.</p> 
+    </div> 
+  </footer> 
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+</body> 
+</html> 

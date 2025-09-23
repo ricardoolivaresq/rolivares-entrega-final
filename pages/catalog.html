@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo | Decanté</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+  <!-- =========================================================
+       NAVBAR UNIFICADO
+       ========================================================= -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+          <img src="../assets/images/logo-transparente.png" alt="Logo Decanté" width="48" height="48" loading="lazy">
+          <span class="fw-semibold">Decanté</span>
+        </a>
+
+        <!-- Toggler estándar de Bootstrap  -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav mx-auto gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">Nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" aria-current="page" href="./catalog.html" role="button" data-bs-toggle="dropdown">Catálogo</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./catalog.html?g=hombre">Hombre</a></li>
+                <li><a class="dropdown-item" href="./catalog.html?g=mujer">Mujer</a></li>
+                <li><a class="dropdown-item" href="./catalog.html?g=todos">Todos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="./packs.html">Packs</a></li>
+            <li class="nav-item"><a class="nav-link" href="./promotions.html">Promociones</a></li>
+          </ul>
+
+          <!-- Buscador + iconos a la derecha  -->
+          <form class="d-flex align-items-center gap-2" role="search" method="get" action="./catalog.html">
+            <input class="form-control" type="search" name="q" placeholder="🔎 Buscar..." aria-label="Buscar" autocomplete="off">
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+            <a class="nav-link fs-5" href="#" aria-label="Ingresar o registrarse" title="Ingresar / Registrarse">👤</a>
+            <a class="nav-link fs-5" href="./cart.html" aria-label="Carrito" title="Carrito">🛒</a>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       CONTENIDO PRINCIPAL (mock)
+       ========================================================= -->
+  <main class="page" id="main-content">
+    <div class="container">
+      <header class="page__header d-flex flex-wrap align-items-center justify-content-between gap-2">
+        <h1 class="page__title m-0">Catálogo</h1>
+      </header>
+
+      <div class="page-grid">
+        <!-- Filtros mock sin lógica  -->
+        <aside class="filters" aria-label="Filtros de catálogo">
+          <form class="filters__form" method="get" action="./catalog.html">
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Género</legend>
+              <label class="d-block"><input type="checkbox" name="g" value="hombre"> Hombre</label>
+              <label class="d-block"><input type="checkbox" name="g" value="mujer"> Mujer</label>
+              <label class="d-block"><input type="checkbox" name="g" value="unisex"> Unisex</label>
+            </fieldset>
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Formato</legend>
+              <label class="d-block"><input type="checkbox" name="s" value="3"> 3 ml</label>
+              <label class="d-block"><input type="checkbox" name="s" value="5"> 5 ml</label>
+              <label class="d-block"><input type="checkbox" name="s" value="10"> 10 ml</label>
+            </fieldset>
+            <fieldset class="filters__group">
+              <legend class="filters__legend">Precio</legend>
+              <label class="d-block"><input type="radio" name="p" value="any" checked> Cualquiera</label>
+              <label class="d-block"><input type="radio" name="p" value="low"> Hasta $13</label>
+              <label class="d-block"><input type="radio" name="p" value="mid"> $13 a $17</label>
+              <label class="d-block"><input type="radio" name="p" value="high"> $17 o más</label>
+            </fieldset>
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="submit">Aplicar filtros</button>
+              <button class="btn btn-outline-secondary" type="reset">Limpiar filtros</button>
+            </div>
+          </form>
+        </aside>
+
+        <!-- Listado de 12 cards mock con la misma imagen -->
+        <section class="listing" aria-label="Listado de perfumes">
+          <div class="product-grid" role="list">
+            <!-- Repite patrón de tarjeta.  -->
+            <!-- 1 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 1"></a>
+              <h3 class="card-product__title">Nombre Perfume 1</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 1</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 10 ml</span>
+                <span class="meta-row"><strong>Género:</strong> unisex</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$13.99</s> <strong>$11.99</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 2"></a>
+              <h3 class="card-product__title">Nombre Perfume 2</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 2</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 5 ml</span>
+                <span class="meta-row"><strong>Género:</strong> mujer</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$12.99</s> <strong>$10.99</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 3"></a>
+              <h3 class="card-product__title">Nombre Perfume 3</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 3</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 3 ml</span>
+                <span class="meta-row"><strong>Género:</strong> hombre</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$11.99</s> <strong>$9.99</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 4"></a>
+              <h3 class="card-product__title">Nombre Perfume 4</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 4</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 10 ml</span>
+                <span class="meta-row"><strong>Género:</strong> hombre</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$14.99</s> <strong>$12.49</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 5 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 5"></a>
+              <h3 class="card-product__title">Nombre Perfume 5</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 5</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 5 ml</span>
+                <span class="meta-row"><strong>Género:</strong> unisex</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$12.49</s> <strong>$10.49</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 6 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 6"></a>
+              <h3 class="card-product__title">Nombre Perfume 6</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 6</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 3 ml</span>
+                <span class="meta-row"><strong>Género:</strong> mujer</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$11.49</s> <strong>$9.49</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 7 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 7"></a>
+              <h3 class="card-product__title">Nombre Perfume 7</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 7</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 10 ml</span>
+                <span class="meta-row"><strong>Género:</strong> mujer</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$14.49</s> <strong>$12.19</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 8 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 8"></a>
+              <h3 class="card-product__title">Nombre Perfume 8</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 8</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 5 ml</span>
+                <span class="meta-row"><strong>Género:</strong> hombre</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$12.19</s> <strong>$10.19</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 9 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 9"></a>
+              <h3 class="card-product__title">Nombre Perfume 9</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 9</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 3 ml</span>
+                <span class="meta-row"><strong>Género:</strong> unisex</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$11.19</s> <strong>$9.19</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 10 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 10"></a>
+              <h3 class="card-product__title">Nombre Perfume 10</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 10</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 10 ml</span>
+                <span class="meta-row"><strong>Género:</strong> hombre</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$15.19</s> <strong>$12.99</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 11 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 11"></a>
+              <h3 class="card-product__title">Nombre Perfume 11</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 1</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 5 ml</span>
+                <span class="meta-row"><strong>Género:</strong> mujer</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$13.49</s> <strong>$11.29</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+
+            <!-- 12 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Nombre Perfume 12"></a>
+              <h3 class="card-product__title">Nombre Perfume 12</h3>
+              <p class="card-home__meta">
+                <span class="meta-row"><strong>Marca:</strong> Marca 2</span>
+                <span class="meta-row"><strong>Tamaño:</strong> 3 ml</span>
+                <span class="meta-row"><strong>Género:</strong> unisex</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span><s class="text-muted">$10.99</s> <strong>$8.99</strong></span>
+                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================
+       FOOTER CONSISTENTE
+       ========================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__cols">
+        <section class="footer__col">
+          <h2 class="h6 text-uppercase mb-3">Información</h2>
+          <ul class="list-unstyled m-0">
+            <li><a class="footer__link" href="./about.html">Sobre Nosotros</a></li>
+            <li><a class="footer__link" href="./catalog.html">Catálogo</a></li>
+            <li><a class="footer__link" href="./packs.html">Packs</a></li>
+            <li><a class="footer__link" href="./promotions.html">Promociones</a></li>
+            <li><a class="footer__link" href="./cart.html">Carrito</a></li>
+          </ul>
+        </section>
+        <section class="footer__col">
+          <h2 class="h6 text-uppercase mb-3">Legal</h2>
+          <ul class="list-unstyled m-0">
+            <li><a class="footer__link" href="./privacy.html">Política de Privacidad</a></li>
+            <li><a class="footer__link" href="./privacy.html#cookies">Política de Cookies</a></li>
+            <li><a class="footer__link" href="./privacy.html#devoluciones">Política de Devoluciones</a></li>
+            <li><a class="footer__link" href="./privacy.html#terminos">Términos y Condiciones</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="text-center small m-0 pt-3">Decanté.com © 2025 - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS Bootstrap únicamente para el colapso del nav -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
