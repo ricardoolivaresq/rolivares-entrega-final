@@ -1,0 +1,27 @@
+@use "../utilities/variables" as v;   // Tokens globales   // 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;             // Modelo de caja predecible // 
+}
+
+html, body {
+  margin: 0; padding: 0;              // Elimina márgenes por defecto // 
+  color: v.$text; background: v.$bg;  // Colores del tema             //
+  font-family: v.$font-sans;          // Fuente                       // 
+  line-height: 1.5;                   
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; // Suavizado                   // 
+}
+
+img {
+  max-width: 100%;                    // Imagen responsiva            // 
+  display: block;                     
+}
+
+.visually-hidden {
+  position: absolute !important;      // Oculto visual pero accesible //
+  width: 1px; height: 1px; padding: 0; margin: -1px;                 //
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; // 
+}

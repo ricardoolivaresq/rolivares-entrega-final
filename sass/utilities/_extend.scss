@@ -1,0 +1,19 @@
+@use "./mixin" as m; // Importa mixins necesarios
+
+%card {
+  @include m.card();   // Tarjeta base
+  display: grid;       // Distribuye contenido en grid
+  gap: .75rem;         // Espaciado interno
+}
+
+%btn-cta {
+  border-radius: 999px; // Botón tipo píldora
+  transition: filter .2s ease;
+  &:hover { filter: brightness(.95); } // Oscurece al pasar
+}
+
+%panel-soft {
+  background: transparent; // Fondo limpio
+  border-color: transparent;
+  box-shadow: none;
+}

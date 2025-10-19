@@ -1,215 +1,255 @@
 <!DOCTYPE html> 
 <html lang="es"> 
-<head> 
+<head>
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Nosotros | Decanté</title> 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net"> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> <!-- CSS de Bootstrap -->
-  <link rel="stylesheet" href="../css/styles.css"> 
+
+  <!-- SEO: título y descripción de la página "Nosotros" -->
+  <title>Nosotros | Decanté</title> <!-- Título visible en pestaña -->
+  <meta name="description" content="Conoce Decanté: decants de perfumes originales en 3, 5 y 10 ml. Curaduría, originalidad garantizada y asesoría para descubrir tu siguiente fragancia."> <!-- Resumen SEO -->
+
+  <!-- SEO: URL canónica -->
+  <link rel="canonical" href="https://decante.infinityfreeapp.com/pages/about.html"> <!-- Canonical consistente -->
+
+  <!-- Social OG-->
+  <meta property="og:type" content="website"> <!-- Tipo de recurso -->
+  <meta property="og:url" content="https://decante.infinityfreeapp.com/pages/about.html"> <!-- URL OG -->
+  <meta property="og:title" content="Nosotros | Decanté"> <!-- Título OG -->
+  <meta property="og:description" content="Decants de perfumes originales con curaduría y formatos prácticos para probar y combinar."> <!-- Descripción OG -->
+  <meta property="og:image" content="https://decante.infinityfreeapp.com/assets/images/decant.png"> <!-- Imagen OG -->
+  <meta property="og:image:alt" content="Decant de perfume original de 10 ml"> <!-- Alt OG -->
+
+  <!-- Social: Twitter Cards (imagen grande) -->
+  <meta name="twitter:card" content="summary_large_image"> <!-- Tipo de card -->
+  <meta name="twitter:title" content="Nosotros | Decanté"> <!-- Título Twitter -->
+  <meta name="twitter:description" content="Originalidad garantizada, formatos 3/5/10 ml y asesoría personalizada."> <!-- Descripción Twitter -->
+  <meta name="twitter:image" content="https://decante.infinityfreeapp.com/assets/images/decant.png"> <!-- Imagen Twitter -->
+
+  <!-- CSS: Bootstrap + hoja de estilos del proyecto -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net"> <!-- CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> <!-- Bootstrap -->
+  <link rel="stylesheet" href="../css/styles.css"> <!-- CSS compilado desde SASS -->
+
+  <style>
+    /* Animación ligera para tarjetas y botones  */
+    .card-product { transition: transform .2s ease, box-shadow .2s ease; } 
+    .card-product:hover { transform: translateY(-4px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); } 
+    .btn { transition: transform .15s ease, box-shadow .15s ease; }
+    .btn:hover { transform: translateY(-1px); } 
+  </style> 
 </head>
 
-<body> 
-  <!-- =========================================================
-       HEADER + NAVBAR UNIFICADO 
-       ========================================================= -->
-  <header class="site-header"> 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
-      <div class="container"> 
-        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html"> <!-- Link al home -->
-          <img src="../assets/images/logo-transparente.png" alt="Logo Decanté" width="48" height="48" loading="lazy"> 
-          <span class="fw-semibold">Decanté</span> 
-        </a> 
+<body> <!-- Inicio del contenido visual -->
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegación"> 
-          <span class="navbar-toggler-icon"></span> 
-        </button> 
+  <!-- HEADER -->
+  <header class="site-header"> <!-- Encabezado global -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"> <!-- Navbar responsiva -->
+      <div class="container"> <!-- Contenedor central -->
 
-        <div class="collapse navbar-collapse" id="navMain"> <!-- Menú colapsable -->
-          <ul class="navbar-nav mx-auto gap-lg-3"> 
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./about.html">Nosotros</a></li> 
-            <li class="nav-item dropdown"> 
-              <a class="nav-link dropdown-toggle" href="./catalog.html" role="button" data-bs-toggle="dropdown">Catálogo</a> 
-              <ul class="dropdown-menu"> <!-- Opciones del catálogo -->
-                <li><a class="dropdown-item" href="./catalog.html?g=hombre">Hombre</a></li> 
-                <li><a class="dropdown-item" href="./catalog.html?g=mujer">Mujer</a></li> 
-                <li><a class="dropdown-item" href="./catalog.html?g=todos">Todos</a></li> 
-              </ul> 
-            </li> 
-            <li class="nav-item"><a class="nav-link" href="./packs.html">Packs</a></li>
-            <li class="nav-item"><a class="nav-link" href="./promotions.html">Promociones</a></li> 
-          </ul> 
+        <!-- Marca: logo + nombre -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html"> 
+          <img src="../assets/images/logo-transparente.png" alt="Logo Decanté"
+               width="48" height="48" loading="lazy" decoding="async"> 
+          <span class="fw-semibold">Decanté</span> <!-- Texto de marca -->
+        </a>
 
-          <form class="d-flex align-items-center gap-2" role="search" method="get" action="./about.html"> <!-- Buscador en esta misma página -->
-            <input class="form-control" type="search" name="q" placeholder="🔎 Buscar..." aria-label="Buscar" autocomplete="off"> 
-            <button class="btn btn-outline-secondary" type="submit">Buscar</button> 
-            <a class="nav-link fs-5" href="#" aria-label="Ingresar o registrarse" title="Ingresar / Registrarse">👤</a> 
-            <a class="nav-link fs-5" href="./cart.html" aria-label="Ir al carrito" title="Carrito">🛒</a>
-          </form> 
+        <!-- Botón hamburguesa para menú móvil -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false"
+                aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span> <!-- Ícono estándar -->
+        </button>
+
+        <!-- Menú principal con dropdown de catálogo -->
+        <div class="collapse navbar-collapse" id="navMain"> 
+          <ul class="navbar-nav mx-auto gap-lg-3"> <!-- Enlaces principales -->
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="./about.html">Nosotros</a></li>
+
+            <!-- Catálogo con filtros rápidos -->
+            <li class="nav-item dropdown"> <!-- Grupo catálogo -->
+              <a class="nav-link dropdown-toggle" href="./catalog.html"
+                 role="button" data-bs-toggle="dropdown">Catálogo</a> 
+              <ul class="dropdown-menu"> <!-- Opciones -->
+                <li><a class="dropdown-item" href="./catalog.html?g=hombre">Hombre</a></li> <!-- Filtro -->
+                <li><a class="dropdown-item" href="./catalog.html?g=mujer">Mujer</a></li> <!-- Filtro -->
+                <li><a class="dropdown-item" href="./catalog.html?g=todos">Todos</a></li> <!-- Ver todo -->
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="./packs.html">Packs</a></li> <!-- Paquetes -->
+            <li class="nav-item"><a class="nav-link" href="./promotions.html">Promociones</a></li> <!-- Ofertas -->
+          </ul>
+
+          <!-- Buscador y accesos a la derecha -->
+          <form class="d-flex align-items-center gap-2" role="search" method="get" action="./about.html"> <!-- Form de búsqueda -->
+            <input class="form-control" type="search" name="q" placeholder="🔎 Buscar..."
+                   aria-label="Buscar" autocomplete="off"> <!-- Campo de texto -->
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button> <!-- CTA -->
+            <a class="nav-link fs-5" href="#" aria-label="Ingresar o registrarse" title="Ingresar / Registrarse">👤</a> <!-- Cuenta -->
+            <a class="nav-link fs-5" href="./cart.html" aria-label="Carrito" title="Carrito">🛒</a> <!-- Carrito -->
+          </form>
         </div> 
       </div> 
-    </nav> 
-  </header> 
+    </nav>
+  </header>
 
-  <!-- =========================================================
-       HERO/PORTADA DE NOSOTROS
-       ========================================================= -->
-  <section class="hero"> 
-    <div class="container"> 
-      <figure class="hero__banner"> 
-        <img src="../assets/images/portada-alter.webp" alt="Decanté: elegancia y precisión en cada decant" class="hero__img"> <!-- Imagen de portada  -->
-        <figcaption class="visually-hidden">Conoce nuestra propuesta de valor</figcaption> 
-      </figure> 
-    </div> 
-  </section> 
-
-  <!-- =========================================================
-       SECCIÓN: SOBRE DECANTÉ / MISIÓN / VISIÓN 
-       ========================================================= -->
+  <!-- MAIN: contenido informativo de la marca -->
   <main class="page" id="main-content"> 
-    <div class="container"> 
+    <div class="container"> <!-- Contenedor general -->
 
-      <section class="about-grid"> <!-- Grid de tres bloques informativos -->
-        <article class="about-card about-card--ghost"> 
-          <header class="about-card__header"> 
-            <h2 class="about-card__title">Sobre Decanté</h2> 
-          </header> 
-          <p class="about-card__text"> 
-            Nacimos para acercarte tus perfumes favoritos en formatos accesibles. Seleccionamos lotes verificados,
-            realizamos procesos de decantado con estándares higiénicos y te entregamos frascos listos para uso diario o viaje.
-          </p> 
-        </article> 
+      <!-- Cabecera de sección -->
+      <header class="page__header text-center mb-4"> <!-- Encabezado -->
+        <h1 class="page__title m-0">Sobre Nosotros</h1> 
+        <p class="section__subtitle m-0">Decants perfumes originales</p> 
+      </header>
 
-        <article class="about-card about-card--ghost"> <!-- Segundo bloque -->
-          <header class="about-card__header"> 
-            <h2 class="about-card__title">Nuestra Misión</h2> 
-          </header> 
-          <p class="about-card__text"> 
-            Democratizar la alta perfumería ofreciendo <em>decants</em> confiables, transparentes y convenientes, con foco en
-            experiencia de compra, educación olfativa y servicio postventa de excelencia.
-          </p> 
-        </article> 
+      <!-- Bloque principal -->
+      <section class="section"> <!-- Sección de contenido -->
+        <div class="row align-items-center gy-3"> 
 
-        <article class="about-card about-card--ghost"> <!-- Tercer bloque -->
-          <header class="about-card__header"> 
-            <h2 class="about-card__title">Nuestra Visión</h2> 
-          </header> 
-          <p class="about-card__text"> 
-            Ser la comunidad de referencia para explorar fragancias, con un catálogo curado y herramientas que faciliten
-            descubrir tu próximo aroma firma sin comprometer tu presupuesto.
-          </p> 
-        </article> 
-      </section> 
+          <!-- Columna de imagen descriptiva -->
+          <div class="col-12 col-md-5"> <!-- Col izquierda -->
+            <figure class="m-0"> 
+              <img src="../assets/images/elaboracion-decant.png" alt="Decant de perfume original de 10 ml"
+                   width="500" height="400" loading="lazy" decoding="async"> 
+              <figcaption class="visually-hidden">Muestra de decant de 10 ml</figcaption> <!-- Descripción oculta -->
+            </figure>
+          </div>
 
-      <!-- ===================================================== -->
-      <!-- SECCIÓN: NUESTRO MÉTODO           -->
-      <!-- ===================================================== -->
-      <section class="about-method"> 
-        <div class="about-method__media"> 
-          <img src="../assets/images/elaboracion.png" alt="Proceso de decantado controlado" class="about-method__img"> 
-        </div> 
-        <div class="about-method__content"> 
-          <h2 class="about-card__title">Nuestro método</h2> 
-          <p class="about-card__text">
-            Trabajamos con atomizadores esterilizados, herramientas de medición y un control de lote que
-            asegura trazabilidad. Cada frasco es sellado y verificado antes del despacho.
-          </p> <!-- /p -->
-          <ul class="about-list"> 
-            <li>Selección de fragancias originales</li> 
-            <li>Decantado seguro y preciso</li> 
-            <li>Etiquetado y control de calidad</li> 
-            <li>Embalaje responsable</li> 
-          </ul> 
-        </div> 
-      </section> 
-
-      <!-- =========================================================
-           BLOQUE: CONTÁCTANOS (mismo del home)
-           ========================================================= -->
-      <section class="section section--contact"> 
-        <header class="text-center mb-4"> 
-          <h2 class="section__title">¡Contáctanos!</h2> 
-          <p class="section__subtitle">Escríbenos o síguenos para enterarte de novedades</p> 
-        </header> 
-
-        <div class="contact"> <!-- Contenedor del bloque -->
-          <ul class="social-list" aria-label="Redes Sociales"> 
-            <li><a class="social-list__link" href="#" aria-label="WhatsApp"><img src="../assets/images/whatsapp.png" alt="WhatsApp" class="social-list__icon"></a></li> 
-            <li><a class="social-list__link" href="#" aria-label="Facebook"><img src="../assets/images/facebook.png" alt="Facebook" class="social-list__icon"></a></li> 
-            <li><a class="social-list__link" href="#" aria-label="Instagram"><img src="../assets/images/instagram.png" alt="Instagram" class="social-list__icon"></a></li> 
-            <li><a class="social-list__link" href="#" aria-label="TikTok"><img src="../assets/images/tik-tok.png" alt="TikTok" class="social-list__icon"></a></li> 
-            <li><a class="social-list__link" href="mailto:contacto@decante.com" aria-label="Enviar correo"><img src="../assets/images/logo-negro.PNG" alt="Email" class="social-list__icon"></a></li> 
-          </ul> 
-
-          <form class="form" method="post" action="#"> <!-- Formulario -->
-            <div class="form__row"> 
-              <div class="form__field"> 
-                <label class="form__label" for="nombre">Nombre</label> 
-                <input class="form__input" type="text" id="nombre" name="nombre" placeholder="Tu nombre"> 
-              </div> 
-              <div class="form__field"> 
-                <label class="form__label" for="apellido">Apellido</label> 
-                <input class="form__input" type="text" id="apellido" name="apellido" placeholder="Tu apellido"> 
-              </div> 
-            </div> 
-
-            <div class="form__row"> <!-- Fila 2 -->
-              <div class="form__field form__field--full"> 
-                <label class="form__label" for="email">Correo electrónico</label> 
-                <input class="form__input" type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com"> <!-- Input email -->
-              </div> 
-            </div> 
-
-            <div class="form__row"> <!-- Fila 3 -->
-              <div class="form__field form__field--full"> 
-                <label class="form__label" for="mensaje">Mensaje</label> 
-                <textarea class="form__input" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué necesitas"></textarea> 
-              </div> 
-            </div> 
-
-            <div class="form__actions"> <!-- Botonera -->
-              <button class="btn btn-primary" type="submit">Enviar</button> <!-- Enviar -->
-            </div> 
-          </form> 
-        </div> 
+          <!-- Columna de texto: proceso y garantías -->
+          <div class="col-12 col-md-7"> <!-- Col derecha -->
+            <h3>Nuestro Proceso</h3> <!-- Subtítulo-->
+            <p> <!-- Párrafo 1 -->
+              Cada decant se prepara en un ambiente <strong>controlado y limpio</strong>. Utilizamos frascos
+              atomizadores de vidrio que preservan la fragancia y evitan la oxidación.
+            </p>
+            <p> <!-- Párrafo 2 -->
+              Trabajamos con <strong>distribuidores autorizados</strong> y verificamos cada lote. Todos nuestros
+              perfumes provienen de frascos <strong>originales</strong> sellados.
+            </p>
+            <p> <!-- Párrafo 3 -->
+              En <strong>Decanté</strong> garantizamos autenticidad al 100%. Si tienes dudas, ofrecemos
+              devolución sin preguntas por autenticidad.
+            </p>
+            <p> <!-- Párrafo 4 -->
+              Cada pedido incluye datos del perfume: casa, concentración (EDT/EDP/Parfum) y notas. Puedes
+              consultar el <strong>código de lote</strong> del frasco original del que proviene tu decant.
+            </p>
+            <ul class="list-unstyled"> <!-- Beneficios clave -->
+              <li>✅ Originalidad garantizada</li>
+              <li>✅ Formatos: 3 ml · 5 ml · 10 ml</li> 
+              <li>✅ Curaduría y asesoría personalizada</li> 
+            </ul>
+          </div>
+        </div>
       </section>
 
-    </div> 
-  </main> 
+      <!-- BLOQUE: redes + formulario de contacto -->
+      <section class="section section--contact"> <!-- Sección de contacto -->
+        <header class="text-center mb-3"> <!-- Encabezado del bloque -->
+          <h2 class="section__title">¿Necesitas ayuda para elegir?</h2> <!-- Título -->
+          <p class="section__subtitle">Escríbenos por redes o envíanos un mensaje</p> 
+        </header>
 
-  <!-- =========================================================
-       FOOTER UNIFICADO
-       ========================================================= -->
-  <footer class="footer"> 
-    <div class="container"> 
-      <div class="footer__cols"> 
-        <section class="footer__col"> 
-          <h2 class="h6 text-uppercase mb-3">Información</h2> 
-          <ul class="list-unstyled m-0"> 
-            <li><a class="footer__link" href="./about.html">Sobre Nosotros</a></li> 
-            <li><a class="footer__link" href="./catalog.html">Catálogo</a></li> 
-            <li><a class="footer__link" href="./packs.html">Packs</a></li> 
-            <li><a class="footer__link" href="./promotions.html">Promociones</a></li> 
-            <li><a class="footer__link" href="./cart.html">Carrito</a></li> 
-          </ul> 
-        </section> 
+        <!-- Redes sociales -->
+        <ul class="social-list justify-content-center mb-4" aria-label="Redes Sociales"> 
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="WhatsApp">
+              <img src="../assets/images/whatsapp.png" alt="WhatsApp"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async"> 
+            </a>
+          </li>
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="Facebook">
+              <img src="../assets/images/facebook.png" alt="Facebook"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async"> 
+            </a>
+          </li>
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="Instagram">
+              <img src="../assets/images/instagram.png" alt="Instagram"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async"> 
+            </a>
+          </li>
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="TikTok">
+              <img src="../assets/images/tik-tok.png" alt="TikTok"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async">
+            </a>
+          </li>
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="Correo">
+              <img src="../assets/images/logo-negro.PNG" alt="Correo electrónico"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async"> 
+            </a>
+          </li>
+        </ul>
 
-        <section class="footer__col"> <!-- Columna Legal -->
-          <h2 class="h6 text-uppercase mb-3">Legal</h2> 
-          <ul class="list-unstyled m-0"> 
+        <!-- Formulario del index -->
+        <form class="contact-form mx-auto" style="max-width:720px;" method="post" action="#" novalidate> <!-- Form placeholder -->
+          <div class="row g-3"> <!-- Fila con espacios -->
+            <div class="col-12 col-md-6"> <!-- Campo nombre -->
+              <label for="name" class="form-label">Nombre</label> <!-- Etiqueta accesible -->
+              <input type="text" class="form-control" id="name" name="name"
+                     placeholder="Tu nombre" required aria-describedby="nameHelp"> <!-- Requerido + ayuda -->
+              <div id="nameHelp" class="form-text">Escribe tu nombre y apellido.</div> <!-- Texto guía -->
+            </div>
+            <div class="col-12 col-md-6"> <!-- Campo correo -->
+              <label for="email" class="form-label">Correo</label> <!-- Etiqueta -->
+              <input type="email" class="form-control" id="email" name="email"
+                     placeholder="tu@correo.com" required aria-describedby="emailHelp"> <!-- Requerido + ayuda -->
+              <div id="emailHelp" class="form-text">Usaremos tu correo solo para responderte.</div> <!-- Texto guía -->
+            </div>
+            <div class="col-12"> <!-- Campo mensaje -->
+              <label for="message" class="form-label">Mensaje</label> <!-- Etiqueta -->
+              <textarea class="form-control" id="message" name="message" rows="4"
+                        placeholder="¿En qué te ayudamos?" required aria-describedby="msgHelp"></textarea> <!-- Requerido + ayuda -->
+              <div id="msgHelp" class="form-text">Cuéntanos brevemente tu consulta.</div> <!-- Texto guía -->
+            </div>
+            <div class="col-12 text-end"> <!-- Botón de envío -->
+              <button class="btn btn-primary" type="submit">Enviar</button> <!-- CTA -->
+            </div>
+          </div>
+        </form>
+      </section>
+    </div> <!-- /container -->
+  </main> <!-- /main -->
+
+  <!-- FOOTER: enlaces informativos y legales -->
+  <footer class="footer"> <!-- Pie semántico -->
+    <div class="container"> <!-- Contenedor del pie -->
+      <div class="footer__cols"> <!-- Columnas de enlaces -->
+        <section class="footer__col"> <!-- Columna información -->
+          <h2 class="h6 text-uppercase mb-3">Información</h2> <!-- Título -->
+          <ul class="list-unstyled m-0"> <!-- Enlaces -->
+            <li><a class="footer__link" href="./about.html">Sobre Nosotros</a></li>
+            <li><a class="footer__link" href="./catalog.html">Catálogo</a></li>
+            <li><a class="footer__link" href="./packs.html">Packs</a></li>
+            <li><a class="footer__link" href="./promotions.html">Promociones</a></li>
+            <li><a class="footer__link" href="./cart.html">Carrito</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__col"> <!-- Columna legal -->
+          <h2 class="h6 text-uppercase mb-3">Legal</h2> <!-- Título -->
+          <ul class="list-unstyled m-0"> <!-- Documentos -->
             <li><a class="footer__link" href="./privacy.html">Política de Privacidad</a></li>
-            <li><a class="footer__link" href="./privacy.html#cookies">Política de Cookies</a></li> 
-            <li><a class="footer__link" href="./privacy.html#devoluciones">Política de Devoluciones</a></li> 
-            <li><a class="footer__link" href="./privacy.html#terminos">Términos y Condiciones</a></li> 
-          </ul> 
-        </section> 
+            <li><a class="footer__link" href="./privacy.html#cookies">Política de Cookies</a></li>
+            <li><a class="footer__link" href="./privacy.html#devoluciones">Política de Devoluciones</a></li>
+            <li><a class="footer__link" href="./privacy.html#terminos">Términos y Condiciones</a></li>
+          </ul>
+        </section>
       </div> 
-
-      <p class="text-center small m-0 pt-3">Decanté.com © 2025 - Todos los derechos reservados.</p> 
+      <p class="text-center small m-0 pt-3">Decanté.com © 2025 - Todos los derechos reservados.</p>
     </div> 
   </footer> 
 
- 
+  <!-- JS: bundle de Bootstrap (dropdown/collapse) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
-</body> 
-</html> 
+</body>
+</html>

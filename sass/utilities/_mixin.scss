@@ -1,0 +1,42 @@
+@use "sass:string";
+@use "sass:color";
+@use "./variables" as v;
+
+// Media query mínimas, máximas y de rango. M.F.
+@mixin up($bp)        { @media (min-width: $bp) { @content; } }
+@mixin down($bp)      { @media (max-width: $bp) { @content; } }
+@mixin between($a,$b) { @media (min-width:$a) and (max-width:$b) { @content; } }
+
+
+@mixin tablet-landscape {
+  @include between(v.$bp-md, v.$bp-md-max) { @content; }
+}
+
+
+@mixin motion-safe    { @media (prefers-reduced-motion: no-preference) { @content; } }
+@mixin motion-reduce  { @media (prefers-reduced-motion: reduce) { @content; } }
+
+@mixin focus-ring($color: v.$primary, $alpha: .12) {
+  $r: color.channel($color, "red",   $space: rgb);
+  $g: color.channel($color, "green", $space: rgb);
+  $b: color.channel($color, "blue",  $space: rgb);
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($r, $g, $b, $alpha);
+  }
+}
+
+
+// Unifica borde, radio, fondo, padding y sombra.
+@mixin card($p: v.$space-4) {
+  border: 1px solid v.$border;
+  border-radius: v.$radius;
+  background: v.$bg;
+  padding: $p;
+  box-shadow: v.$shadow;
+}
+
+// Evita conflictos de unidades entre rem y vw en Sass.
+@mixin clamp-font($min, $fluid, $max) {
+  font-size: clamp(#{$min}, string.unquote(#{$fluid}), #{$max});
+}

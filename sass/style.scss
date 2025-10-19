@@ -1,0 +1,11 @@
+// ---------- Utilities ----------
+@use "utilities/variables";     // Tokens globales                 // 
+@use "utilities/mixin";         // Mixins    // (4)
+@use "utilities/extend";        // Placeholders %card/%btn/%panel   // 
+@use "utilities/animations";    // ✅ Animaciones y utilidades      // 
+
+// ---------- Base ----------
+@use "base/reset";              // Reset + accesibilidad            // 
+
+// ---------- Layout ----------
+@use "layout/home";             // Home + carrusel + grids + cards  // 

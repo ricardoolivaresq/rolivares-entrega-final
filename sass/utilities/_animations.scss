@@ -1,0 +1,35 @@
+@use "./variables" as v;
+@use "./mixin" as m;
+
+// --- Keyframes base ---
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+
+// --- Clases utilitarias ---
+.aos-fade-in { @include m.motion-safe { animation: fadeIn .6s ease-out both; } }
+.aos-fade-up { @include m.motion-safe { animation: fadeUp .6s ease-out both; } }
+.float-slow  { @include m.motion-safe { animation: floatY 6s ease-in-out infinite; } }
+
+// --- Hovers ---
+.hover-lift {
+  transition: transform .25s ease, box-shadow .25s ease;
+  @include m.motion-safe { &:hover { transform: translateY(-4px); box-shadow: 0 6px 16px rgba(0,0,0,.1); } }
+}
+
+.hover-underline-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%; background-repeat: no-repeat;
+  background-size: 0% 1px; transition: background-size .25s ease;
+  &:hover { background-size: 100% 1px; }
+}
+
+// --- Reducción de movimiento ---
+@include m.motion-reduce {
+  .float-slow { animation: none !important; }
+  .hover-lift, .aos-fade-in, .aos-fade-up {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

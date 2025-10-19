@@ -1,303 +1,304 @@
 <!DOCTYPE html> 
-<html lang="es">
-<head> 
+<html lang="es"> 
+<head>
   <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Packs | Decanté</title> 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net"> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> 
-  <link rel="stylesheet" href="../css/styles.css"> 
-</head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-<body> 
+  <!-- SEO: -->
+  <title>Packs | Decanté</title> <!-- Título de pestaña del navegador -->
+  <meta name="description" content="Packs de decants: combina fragancias en 3, 5 y 10 ml. Ahorra por volumen y elige estilos para hombre, mujer o unisex."> <!-- Resumen SEO -->
 
-  <!-- =========================================================
-       NAVBAR 
-       ========================================================= -->
+  <!-- SEO: URL canónica para evitar duplicados -->
+  <link rel="canonical" href="https://decante.infinityfreeapp.com/pages/packs.html">
+
+  <!-- Social OG -->
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="https://decante.infinityfreeapp.com/pages/packs.html"> <!-- URL pública -->
+  <meta property="og:title" content="Packs | Decanté"> <!-- Título social -->
+  <meta property="og:description" content="Arma tu pack de decants y ahorra: clásicos, nicho y combinaciones por estilo."> <!-- Descripción OG -->
+  <meta property="og:image" content="https://decante.infinityfreeapp.com/assets/images/decant.png"> <!-- Imagen OG -->
+  <meta property="og:image:alt" content="Decant de perfume original de 10 ml"> <!-- Alternativo OG -->
+
+  <!-- Social: Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image"> 
+  <meta name="twitter:title" content="Packs | Decanté"> 
+  <meta name="twitter:description" content="Combina fragancias y obtén descuento por cantidad. Formatos 3/5/10 ml."> <!-- Descripción breve -->
+  <meta name="twitter:image" content="https://decante.infinityfreeapp.com/assets/images/decant.png"> <!-- Imagen de tarjeta -->
+
+  <!-- CSS: Bootstrap + hoja de estilos propia -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net"> <!-- CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> <!-- Bootstrap -->
+  <link rel="stylesheet" href="../css/styles.css"> <!-- CSS compilado desde SASS -->
+</head>
+
+<body>
+
+  <!-- HEADER: -->
   <header class="site-header"> 
     <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
       <div class="container"> 
+
+        <!-- Marca del sitio -->
         <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html"> 
-          <img src="../assets/images/logo-transparente.png" alt="Logo Decanté" width="48" height="48" loading="lazy"> <!-- Logo -->
+          <img src="../assets/images/logo-transparente.png" alt="Logo Decanté"
+               width="48" height="48" loading="lazy" decoding="async"> 
           <span class="fw-semibold">Decanté</span> <!-- Nombre de marca -->
         </a>
 
-        <!-- Botón hamburguesa en móvil -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
-                aria-controls="navMain" aria-expanded="false" aria-label="Alternar navegación">
-          <span class="navbar-toggler-icon"></span> 
+        <!-- Botón hamburguesa para abrir/cerrar menú en dispositivos pequeños -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false"
+                aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
         </button>
 
-        
+        <!-- Menú principal con catálogo y otras secciones -->
         <div class="collapse navbar-collapse" id="navMain"> 
           <ul class="navbar-nav mx-auto gap-lg-3"> 
-            <li class="nav-item"><a class="nav-link" href="./about.html">Nosotros</a></li> <!-- Link Nosotros -->
+            <li class="nav-item"><a class="nav-link" href="./about.html">Nosotros</a></li> 
 
-            <!-- Catálogo con dropdown -->
-            <li class="nav-item dropdown"> 
-              <a class="nav-link dropdown-toggle" href="./catalog.html" role="button" data-bs-toggle="dropdown">Catálogo</a>
-              <ul class="dropdown-menu"> 
-                <li><a class="dropdown-item" href="./catalog.html?g=hombre">Hombre</a></li> 
-                <li><a class="dropdown-item" href="./catalog.html?g=mujer">Mujer</a></li> 
+            <!-- Catálogo con submenú de filtros rápidos -->
+            <li class="nav-item dropdown"> <!-- Grupo catálogo -->
+              <a class="nav-link dropdown-toggle" href="./catalog.html"
+                 role="button" data-bs-toggle="dropdown">Catálogo</a> 
+              <ul class="dropdown-menu"> <!-- Opciones de catálogo -->
+                <li><a class="dropdown-item" href="./catalog.html?g=hombre">Hombre</a></li> <!-- Filtro por género -->
+                <li><a class="dropdown-item" href="./catalog.html?g=mujer">Mujer</a></li> <!-- Filtro por género -->
                 <li><a class="dropdown-item" href="./catalog.html?g=todos">Todos</a></li> 
               </ul>
             </li>
 
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="./packs.html">Packs</a></li> 
-            <li class="nav-item"><a class="nav-link" href="./promotions.html">Promociones</a></li> <!-- Link promociones -->
+            <li class="nav-item"><a class="nav-link" href="./promotions.html">Promociones</a></li> 
           </ul>
 
-          <!-- Buscador + botón + iconos a la derecha  -->
-          <form class="d-flex align-items-center gap-2" method="get" action="./packs.html" role="search"> 
-            <input class="form-control" type="search" name="q" placeholder="🔎 Buscar..." aria-label="Buscar" autocomplete="off"> 
-            <button class="btn btn-outline-secondary" type="submit">Buscar</button> 
-            <a class="nav-link fs-5" href="#" aria-label="Ingresar o registrarse" title="Ingresar / Registrarse">👤</a> <!-- Ícono login -->
-            <a class="nav-link fs-5" href="./cart.html" aria-label="Carrito" title="Carrito">🛒</a> <!-- Ícono carrito -->
+          <!-- Buscador y accesos a cuenta/carrito -->
+          <form class="d-flex align-items-center gap-2" role="search" method="get" action="./packs.html"> <!-- Form de búsqueda -->
+            <input class="form-control" type="search" name="q" placeholder="🔎 Buscar..."
+                   aria-label="Buscar" autocomplete="off"> <!-- Campo de búsqueda -->
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button> <!-- Acción de búsqueda -->
+            <a class="nav-link fs-5" href="#" aria-label="Ingresar o registrarse" title="Ingresar / Registrarse">👤</a> 
+            <a class="nav-link fs-5" href="./cart.html" aria-label="Carrito" title="Carrito">🛒</a> <!-- Carrito -->
           </form>
         </div> 
       </div> 
-    </nav> 
-  </header> 
+    </nav>
+  </header>
 
-  <!-- =========================================================
-       CONTENIDO PRINCIPAL 
-       ========================================================= -->
+  <!-- MAIN) -->
   <main class="page" id="main-content"> 
     <div class="container"> 
 
-   
-      <header class="page__header d-flex flex-wrap align-items-center justify-content-between gap-2"> 
+      <!-- Cabecera de la página -->
+      <header class="page__header d-flex flex-wrap align-items-center justify-content-between gap-2"> <!-- Encabezado -->
         <h1 class="page__title m-0">Packs</h1> 
+        <p class="section__subtitle m-0">Ahorra combinando decants por estilo o cantidad</p>
       </header>
 
-      
-      <div class="page-grid"> <!-- Grid de dos columnas -->
+      <!-- Layout de dos columnas -->
+      <div class="page-grid"> <!-- Grid general -->
 
-        <!-- ---------------- Sidebar de filtros (sin lógica) ---------------- -->
-        <aside class="filters" aria-label="Filtros de packs"> 
+        <!-- Sidebar de filtros -->
+        <aside class="filters" aria-label="Filtros de packs">
           <form class="filters__form" method="get" action="./packs.html"> 
-            <fieldset class="filters__group"> 
-              <legend class="filters__legend">Género</legend> 
+            <fieldset class="filters__group"> <!-- Grupo: género -->
+              <legend class="filters__legend">Género</legend> <!-- Título del grupo -->
               <label class="d-block"><input type="checkbox" name="g" value="hombre"> Hombre</label> 
               <label class="d-block"><input type="checkbox" name="g" value="mujer"> Mujer</label> 
               <label class="d-block"><input type="checkbox" name="g" value="unisex"> Unisex</label> 
             </fieldset>
 
-            <fieldset class="filters__group"> <!-- Grupo Formato -->
-              <legend class="filters__legend">Formato</legend> 
-              <label class="d-block"><input type="checkbox" name="s" value="3"> 3 ml</label>
-              <label class="d-block"><input type="checkbox" name="s" value="5"> 5 ml</label>
-              <label class="d-block"><input type="checkbox" name="s" value="10"> 10 ml</label>
+            <fieldset class="filters__group"> <!-- Grupo: formato -->
+              <legend class="filters__legend">Formato</legend> <!-- Título del grupo -->
+              <label class="d-block"><input type="checkbox" name="s" value="3"> 3 ml</label> 
+              <label class="d-block"><input type="checkbox" name="s" value="5"> 5 ml</label> 
+              <label class="d-block"><input type="checkbox" name="s" value="10"> 10 ml</label> 
             </fieldset>
 
-            <fieldset class="filters__group"> <!-- Grupo Precio -->
-              <legend class="filters__legend">Precio</legend>
-              <label class="d-block"><input type="radio" name="p" value="any" checked> Cualquiera</label>
-              <label class="d-block"><input type="radio" name="p" value="low"> Hasta $40</label>
-              <label class="d-block"><input type="radio" name="p" value="mid"> $40 a $60</label>
-              <label class="d-block"><input type="radio" name="p" value="high"> $60 o más</label>
+            <fieldset class="filters__group"> <!-- Grupo: tipo de pack -->
+              <legend class="filters__legend">Tipo de Pack</legend> <!-- Título -->
+              <label class="d-block"><input type="radio" name="t" value="todos" checked> Todos</label> 
+              <label class="d-block"><input type="radio" name="t" value="descubrimiento"> Descubrimiento</label> 
+              <label class="d-block"><input type="radio" name="t" value="clasicos"> Clásicos</label> 
+              <label class="d-block"><input type="radio" name="t" value="nicho"> Nicho</label> 
             </fieldset>
 
-            <div class="d-grid gap-2"> <!-- Botonera -->
+            <div class="d-grid gap-2"> <!-- Acciones de filtro -->
               <button class="btn btn-primary" type="submit">Aplicar filtros</button> 
-              <button class="btn btn-outline-secondary" type="reset">Limpiar filtros</button>
+              <button class="btn btn-outline-secondary" type="reset">Limpiar filtros</button> 
             </div>
           </form>
-        </aside> 
+        </aside>
 
-        <!-- ---------------- Listado de 12 packs ---------------- -->
+        <!-- Listado: 12 cards  -->
         <section class="listing" aria-label="Listado de packs"> 
           <div class="product-grid" role="list"> 
 
-            <!-- Card 1 -->
-            <article class="card-product position-relative" role="listitem"> 
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 22%</span> 
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x10 ml Nicho 1"></a> 
-              <h3 class="card-product__title">Pack 3x10 ml Nicho 1</h3> 
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 nichos de 10 ml</span>
-                <span class="meta-row"><strong>Género:</strong> unisex</span>
-                <span class="meta-row"><strong>Formato:</strong> 10 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center"> 
-                <span><s class="text-muted">$71.99</s> <strong>$55.99</strong></span> 
+            <!-- Pack 1 -->
+            <article class="card-product" role="listitem">
+              <a class="card-product__media" href="#"> <!-- Enlace a detalle (mock) -->
+                <img src="../assets/images/decant.png" alt="Pack 3 decants mixtos 5 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen con medidas -->
+              </a>
+              <h3 class="card-product__title">Pack 3×5 ml Mixto</h3> <!-- Título -->
+              <p class="card-home__meta">Incluye 3 decants de 5 ml a elección (clásicos o nicho).</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio + CTA -->
+                <span><s class="text-muted">$38.97</s> <strong>$34.99</strong></span> 
                 <button class="btn btn-sm btn-success" type="button">Agregar</button> 
               </div>
             </article>
 
-            <!-- Card 2 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 18%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x5 ml Diseñador 1"></a>
-              <h3 class="card-product__title">Pack 3x5 ml Diseñador 1</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 diseñadores de 5 ml</span>
-                <span class="meta-row"><strong>Género:</strong> hombre</span>
-                <span class="meta-row"><strong>Formato:</strong> 5 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$42.10</s> <strong>$35.10</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 2 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 3 decants varoniles 10 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 3×10 ml Hombre</h3> <!-- Título -->
+              <p class="card-home__meta">Sauvage, Bleu de Chanel y Acqua di Giò en 10 ml.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$55.67</s> <strong>$47.99</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- Card 3 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 22%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x10 ml Nicho 2"></a>
-              <h3 class="card-product__title">Pack 3x10 ml Nicho 2</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 nichos de 10 ml</span>
-                <span class="meta-row"><strong>Género:</strong> mujer</span>
-                <span class="meta-row"><strong>Formato:</strong> 10 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$71.99</s> <strong>$55.99</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 3 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 3 decants femeninos 5 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 3×5 ml Mujer</h3> <!-- Título -->
+              <p class="card-home__meta">Coco Mademoiselle, J’adore y Black Opium en 5 ml.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$56.37</s> <strong>$48.49</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- Card 4 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 18%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x5 ml Diseñador 2"></a>
-              <h3 class="card-product__title">Pack 3x5 ml Diseñador 2</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 diseñadores de 5 ml</span>
-                <span class="meta-row"><strong>Género:</strong> unisex</span>
-                <span class="meta-row"><strong>Formato:</strong> 5 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$42.10</s> <strong>$35.10</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 4 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 5 decants nicho 3 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 5×3 ml Nicho</h3> <!-- Título -->
+              <p class="card-home__meta">Curaduría de nicho (incluye Baccarat Rouge 540).</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$62.45</s> <strong>$52.99</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- Cards 5 a 12 con el mismo patrón (mock) -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 22%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x10 ml Nicho 3"></a>
-              <h3 class="card-product__title">Pack 3x10 ml Nicho 3</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 nichos de 10 ml</span>
-                <span class="meta-row"><strong>Género:</strong> hombre</span>
-                <span class="meta-row"><strong>Formato:</strong> 10 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$71.99</s> <strong>$55.99</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 5 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 2 decants unisex 10 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 2×10 ml Unisex</h3> <!-- Título -->
+              <p class="card-home__meta">Dúo unisex (Black Orchid + BR540) en 10 ml.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$43.48</s> <strong>$38.99</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- 6 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 18%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x5 ml Diseñador 3"></a>
-              <h3 class="card-product__title">Pack 3x5 ml Diseñador 3</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 diseñadores de 5 ml</span>
-                <span class="meta-row"><strong>Género:</strong> mujer</span>
-                <span class="meta-row"><strong>Formato:</strong> 5 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$42.10</s> <strong>$35.10</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 6 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 4 decants descubrimiento 5 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 4×5 ml Descubrimiento</h3> <!-- Título -->
+              <p class="card-home__meta">Selección variada para encontrar tu firma.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$74.76</s> <strong>$63.99</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- 7 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 22%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x10 ml Nicho 4"></a>
-              <h3 class="card-product__title">Pack 3x10 ml Nicho 4</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 nichos de 10 ml</span>
-                <span class="meta-row"><strong>Género:</strong> unisex</span>
-                <span class="meta-row"><strong>Formato:</strong> 10 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$71.99</s> <strong>$55.99</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 7 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 3 decants cítricos 5 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 3×5 ml Cítricos</h3> <!-- Título -->
+              <p class="card-home__meta">Mezcla fresca ideal para verano.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$34.99</s> <strong>$29.99</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- 8 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 18%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x5 ml Diseñador 4"></a>
-              <h3 class="card-product__title">Pack 3x5 ml Diseñador 4</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 diseñadores de 5 ml</span>
-                <span class="meta-row"><strong>Género:</strong> unisex</span>
-                <span class="meta-row"><strong>Formato:</strong> 5 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$42.10</s> <strong>$35.10</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 8 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 3 decants dulces 5 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 3×5 ml Dulces</h3> <!-- Título -->
+              <p class="card-home__meta">Aromas gourmand y envolventes.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$36.99</s> <strong>$31.49</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- 9 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 22%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x10 ml Nicho 5"></a>
-              <h3 class="card-product__title">Pack 3x10 ml Nicho 5</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 nichos de 10 ml</span>
-                <span class="meta-row"><strong>Género:</strong> mujer</span>
-                <span class="meta-row"><strong>Formato:</strong> 10 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$71.99</s> <strong>$55.99</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 9 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 3 decants amaderados 5 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 3×5 ml Amaderados</h3> <!-- Título -->
+              <p class="card-home__meta">Perfil cálido y elegante.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$36.99</s> <strong>$31.49</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- 10 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 18%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x5 ml Diseñador 5"></a>
-              <h3 class="card-product__title">Pack 3x5 ml Diseñador 5</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 diseñadores de 5 ml</span>
-                <span class="meta-row"><strong>Género:</strong> hombre</span>
-                <span class="meta-row"><strong>Formato:</strong> 5 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$42.10</s> <strong>$35.10</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 10 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 3 decants florales 5 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 3×5 ml Florales</h3> <!-- Título -->
+              <p class="card-home__meta">Clásicos femeninos imprescindibles.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$36.99</s> <strong>$31.49</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- 11 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 22%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x10 ml Nicho 6"></a>
-              <h3 class="card-product__title">Pack 3x10 ml Nicho 6</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 nichos de 10 ml</span>
-                <span class="meta-row"><strong>Género:</strong> hombre</span>
-                <span class="meta-row"><strong>Formato:</strong> 10 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$71.99</s> <strong>$55.99</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 11 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 2 decants intensos 10 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 2×10 ml Intensos</h3> <!-- Título -->
+              <p class="card-home__meta">Proyección y duración destacadas.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$49.99</s> <strong>$42.49</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
-            <!-- 12 -->
-            <article class="card-product position-relative" role="listitem">
-              <span class="badge bg-success position-absolute top-0 start-0 m-2">Ahorro 18%</span>
-              <a class="card-product__media" href="#"><img src="../assets/images/decant.png" alt="Pack 3x5 ml Diseñador 6"></a>
-              <h3 class="card-product__title">Pack 3x5 ml Diseñador 6</h3>
-              <p class="card-home__meta">
-                <span class="meta-row"><strong>Incluye:</strong> 3 diseñadores de 5 ml</span>
-                <span class="meta-row"><strong>Género:</strong> unisex</span>
-                <span class="meta-row"><strong>Formato:</strong> 5 ml</span>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <span><s class="text-muted">$42.10</s> <strong>$35.10</strong></span>
-                <button class="btn btn-sm btn-success" type="button">Agregar</button>
+            <!-- Pack 12 -->
+            <article class="card-product" role="listitem"> <!-- Card -->
+              <a class="card-product__media" href="#">
+                <img src="../assets/images/decant.png" alt="Pack 4 decants oficina 5 ml"
+                     width="320" height="426" loading="lazy" decoding="async"> <!-- Imagen -->
+              </a>
+              <h3 class="card-product__title">Pack 4×5 ml Oficina</h3> <!-- Título -->
+              <p class="card-home__meta">Fragancias versátiles para diario.</p> <!-- Texto -->
+              <div class="d-flex justify-content-between align-items-center"> <!-- Precio -->
+                <span><s class="text-muted">$69.99</s> <strong>$59.49</strong></span> <!-- Ahorro -->
+                <button class="btn btn-sm btn-success" type="button">Agregar</button> <!-- CTA -->
               </div>
             </article>
 
@@ -305,17 +306,15 @@
         </section> 
       </div> 
     </div> 
-  </main> 
+  </main>
 
-  <!-- =========================================================
-       FOOTER
-       ========================================================= -->
-  <footer class="footer"> 
+  <!-- FOOTER-->
+  <footer class="footer">
     <div class="container"> 
-      <div class="footer__cols"> <!-- Dos columnas -->
-        <section class="footer__col"> <!-- Columna de enlaces -->
-          <h2 class="h6 text-uppercase mb-3">Información</h2>
-          <ul class="list-unstyled m-0">
+      <div class="footer__cols"> 
+        <section class="footer__col"> 
+          <h2 class="h6 text-uppercase mb-3">Información</h2> 
+          <ul class="list-unstyled m-0"> <!-- Enlaces -->
             <li><a class="footer__link" href="./about.html">Sobre Nosotros</a></li>
             <li><a class="footer__link" href="./catalog.html">Catálogo</a></li>
             <li><a class="footer__link" href="./packs.html">Packs</a></li>
@@ -323,21 +322,22 @@
             <li><a class="footer__link" href="./cart.html">Carrito</a></li>
           </ul>
         </section>
-        <section class="footer__col"> <!-- Columna legal -->
-          <h2 class="h6 text-uppercase mb-3">Legal</h2>
-          <ul class="list-unstyled m-0">
+
+        <section class="footer__col"> <!-- Columna 2 -->
+          <h2 class="h6 text-uppercase mb-3">Legal</h2> <!-- Título -->
+          <ul class="list-unstyled m-0"> <!-- Enlaces legales -->
             <li><a class="footer__link" href="./privacy.html">Política de Privacidad</a></li>
             <li><a class="footer__link" href="./privacy.html#cookies">Política de Cookies</a></li>
             <li><a class="footer__link" href="./privacy.html#devoluciones">Política de Devoluciones</a></li>
             <li><a class="footer__link" href="./privacy.html#terminos">Términos y Condiciones</a></li>
           </ul>
         </section>
-      </div>
+      </div> 
       <p class="text-center small m-0 pt-3">Decanté.com © 2025 - Todos los derechos reservados.</p> 
-    </div>
+    </div> 
   </footer> 
 
-  
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
-</body> 
-</html> 
+</body>
+</html>

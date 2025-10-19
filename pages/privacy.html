@@ -1,105 +1,276 @@
-<!DOCTYPE html> <!-- HTML5 -->
-<html lang="es"> <!-- Idioma -->
-  <head> <!-- Head -->
-    <meta charset="UTF-8" /> <!-- Codificación -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Responsive -->
-    <title>Decanté — Política de Privacidad</title> <!-- Título -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" /> <!-- Bootstrap -->
-    <link rel="stylesheet" href="../css/styles.css" /> <!-- CSS global -->
-  </head> <!-- /head -->
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body> <!-- Cuerpo -->
+  <!-- SEO: título y descripción de la página legal -->
+  <title>Política de Privacidad | Decanté</title> 
+  <meta name="description" content="Política de Privacidad de Decanté: tratamiento de datos, cookies, devoluciones y términos del servicio. Información clara para nuestros clientes."> <!-- Resumen SEO -->
 
-    <!-- ===== HEADER PRO UNIFICADO ===== -->
-    <header class="header"> <!-- Header -->
-      <nav class="navbar navbar-light navbar-expand-md bg-white"> <!-- Navbar -->
-        <div class="container"> <!-- Contenedor -->
-          <a class="navbar-brand d-flex align-items-center" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBrand" aria-controls="offcanvasBrand" aria-label="Abrir menú principal"> <!-- Trigger -->
-            <img src="../assets/images/logo-transparente.png" alt="Logo Decanté" height="48" /> <!-- Logo -->
-          </a> <!-- /brand -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button> <!-- Hamburguesa -->
-          <div class="collapse navbar-collapse" id="navMain"> <!-- Menú -->
-            <ul class="navbar-nav mx-auto"> <!-- Centro -->
-              <li class="nav-item"><a class="nav-link fw-bold" href="./about.html">Nosotros</a></li> <!-- Link -->
-              <li class="nav-item dropdown dropdown-mega"> <!-- Mega catálogo -->
-                <a class="nav-link fw-bold dropdown-toggle" href="./catalog.html" id="megaCatalog" role="button" data-bs-toggle="dropdown" aria-expanded="false">Catálogo</a> <!-- Toggle -->
-                <div class="dropdown-menu dropdown-menu-mega p-0 mt-2" aria-labelledby="megaCatalog"> <!-- Mega -->
-                  <div class="contenedor py-3"> <!-- Alineación -->
-                    <div class="mega-grid"> <!-- 4 col -->
-                      <div class="mega-col"><h6>Familias</h6><a href="./catalog.html">Cítricos</a><a href="./catalog.html">Dulces</a><a href="./catalog.html">Amaderados</a><a href="./catalog.html">Aromáticos</a></div> <!-- Col 1 -->
-                      <div class="mega-col"><h6>Concentración</h6><a href="./catalog.html">Decant 3 ml</a><a href="./catalog.html">Decant 5 ml</a><a href="./catalog.html">Decant 10 ml</a><a href="./catalog.html">Muestras</a></div> <!-- Col 2 -->
-                      <div class="mega-col"><h6>Selecciones</h6><a href="./catalog.html">Más vendidos</a><a href="./catalog.html">Nuevos</a><a href="./catalog.html">Nicho</a><a href="./catalog.html">Ofertas</a></div> <!-- Col 3 -->
-                      <div class="mega-spot"><strong>¿Primer decant?</strong><span>Empieza con los top sellers y ahorra con envío combinado.</span><a class="btn btn-sm btn-primary mt-1" href="./packs.html">Ver Packs</a></div> <!-- Col 4 -->
-                    </div> <!-- /mega-grid -->
-                  </div> <!-- /contenedor -->
-                </div> <!-- /dropdown-menu -->
-              </li> <!-- /li -->
-              <li class="nav-item"><a class="nav-link fw-bold" href="./packs.html">Packs</a></li> <!-- Link -->
-              <li class="nav-item"><a class="nav-link fw-bold" href="./promotions.html">Promociones</a></li> <!-- Link -->
-            </ul> <!-- /ul -->
-            <div class="d-flex align-items-center gap-3 position-relative"> <!-- Acciones -->
-              <a class="icon-link" href="#" data-bs-toggle="modal" data-bs-target="#modalSearch" aria-label="Buscar" title="Buscar">🔎</a> <!-- Buscar -->
-              <a class="icon-link" href="./cart.html" aria-label="Carrito" title="Carrito">🛒</a> <!-- Carrito -->
-              <a class="icon-link" href="#" aria-label="Ingresar" title="Ingresar">👤</a> <!-- Login -->
-            </div> <!-- /acciones -->
-          </div> <!-- /collapse -->
-        </div> <!-- /container -->
-      </nav> <!-- /navbar -->
-    </header> <!-- /header -->
+  <!-- SEO -->
+  <link rel="canonical" href="https://decante.infinityfreeapp.com/pages/privacy.html">
 
-    <!-- ===== OFFCANVAS ===== -->
-    <div class="offcanvas offcanvas-end offcanvas-brand" tabindex="-1" id="offcanvasBrand" aria-labelledby="offcanvasBrandLabel"> <!-- Panel -->
-      <div class="offcanvas-header"><h5 class="offcanvas-title" id="offcanvasBrandLabel">Explora Decanté</h5><button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button></div> <!-- Cabecera -->
-      <div class="offcanvas-body d-flex flex-column justify-content-between"> <!-- Cuerpo -->
-        <div> <!-- Nav -->
-          <div class="launcher-grid"> <!-- Accesos -->
-            <a class="launcher-item" href="../index.html"><span class="emoji">🏠</span><span>Inicio</span></a> <!-- Inicio -->
-            <a class="launcher-item" href="./catalog.html"><span class="emoji">🧴</span><span>Catálogo completo</span></a> <!-- Catálogo -->
-            <a class="launcher-item" href="./packs.html"><span class="emoji">🎁</span><span>Packs recomendados</span></a> <!-- Packs -->
-            <a class="launcher-item" href="./promotions.html"><span class="emoji">🔥</span><span>Promociones</span></a> <!-- Promos -->
-            <a class="launcher-item" href="./about.html"><span class="emoji">💬</span><span>Nosotros</span></a> <!-- Nosotros -->
-            <a class="launcher-item" href="./cart.html"><span class="emoji">🛒</span><span>Carrito</span></a> <!-- Carrito -->
-          </div> <!-- /launcher-grid -->
-          <div class="launcher-aside"><strong>¿Necesitas ayuda?</strong><div class="d-grid gap-2 mt-1"><a class="btn btn-outline-secondary btn-sm" href="#">Preguntas frecuentes</a><a class="btn btn-outline-secondary btn-sm" href="#">Seguimiento de envío</a></div></div> <!-- Ayuda -->
-        </div> <!-- /nav -->
-        <div class="text-center small text-muted">Decanté.com © 2025</div> <!-- Pie -->
-      </div> <!-- /body -->
-    </div> <!-- /offcanvas -->
+  <!-- Social OG-->
+  <meta property="og:type" content="website"> 
+  <meta property="og:url" content="https://decante.infinityfreeapp.com/pages/privacy.html"> 
+  <meta property="og:title" content="Política de Privacidad | Decanté"> 
+  <meta property="og:description" content="Conoce cómo cuidamos tus datos, el uso de cookies, devoluciones y términos del servicio."> 
+  <meta property="og:image" content="https://decante.infinityfreeapp.com/assets/images/decant.png"> 
+  <meta property="og:image:alt" content="Decant de perfume original de 10 ml">
 
-    <!-- ===== MODAL BÚSQUEDA ===== -->
-    <div class="modal fade modal-search" id="modalSearch" tabindex="-1" aria-labelledby="modalSearchLabel" aria-hidden="true"> <!-- Modal -->
-      <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalSearchLabel">Buscar fragancias</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button></div><div class="modal-body"><div class="input-group mb-3"><span class="input-group-text">🔎</span><input type="text" class="form-control" placeholder="Escribe marca, familia o nombre…" aria-label="Buscar" /><button class="btn btn-primary" type="button">Buscar</button></div><ul class="list-group"><li class="list-group-item"><a href="./catalog.html">Top ventas de esta semana</a></li><li class="list-group-item"><a href="./catalog.html">Dulces · Recomendados</a></li><li class="list-group-item"><a href="./catalog.html">Decants 10 ml en oferta</a></li></ul></div></div></div> <!-- Estructura -->
-    </div> <!-- /modal -->
+  <!-- Social: Twitter Cards (imagen grande) -->
+  <meta name="twitter:card" content="summary_large_image"> <!-- Tipo de tarjeta -->
+  <meta name="twitter:title" content="Política de Privacidad | Decanté"> 
+  <meta name="twitter:description" content="Transparencia sobre datos personales, cookies, devoluciones y términos."> 
+  <meta name="twitter:image" content="https://decante.infinityfreeapp.com/assets/images/decant.png"> 
 
-    <!-- ===== MAIN (1 columna por layout universal) ===== -->
-    <main class="contenedor"> <!-- Contenedor -->
-      <h1 class="titulo-seccion">POLÍTICA DE PRIVACIDAD</h1> <!-- Título -->
+  <!-- CSS: Bootstrap + estilos del proyecto -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net"> <!-- Preconexión a CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="../css/styles.css">
 
-      <div class="page-grid"> <!-- Layout universal; sin sidebar/aside → 1 columna -->
-        <section class="page-main"> <!-- Contenido principal -->
-          <article class="about-box"> <!-- Caja simple reutilizada -->
-            <h3>Resumen</h3> <!-- Subtítulo -->
-            <p>En Decanté cuidamos tus datos personales. Esta página describe qué información recopilamos, para qué la usamos y cómo puedes ejercer tus derechos.</p> <!-- Texto -->
-            <h3>Datos que recopilamos</h3> <!-- Subtítulo -->
-            <p>Recopilamos datos de cuenta (nombre, email), de compra (productos, importe) y técnicos (cookies, IP para analítica básica). No vendemos tus datos.</p> <!-- Texto -->
-            <h3>Tus derechos</h3> <!-- Subtítulo -->
-            <p>Puedes solicitar acceso, rectificación o eliminación de tus datos escribiendo a <a href="#">soporte@decante.com</a>. También puedes desactivar cookies no esenciales.</p> <!-- Texto -->
-            <h3>Retención</h3> <!-- Subtítulo -->
-            <p>Conservamos tus datos el tiempo necesario para cumplir con obligaciones legales y de servicio postventa.</p> <!-- Texto -->
-          </article> <!-- /about-box -->
-        </section> <!-- /page-main -->
+  <style>
+    .card-product { transition: transform .2s ease, box-shadow .2s ease; } 
+    .card-product:hover { transform: translateY(-4px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); } 
+    .btn { transition: transform .15s ease, box-shadow .15s ease; } 
+    .btn:hover { transform: translateY(-1px); } 
+  </style> 
+</head>
 
-        <aside class="page-legal"> <!-- Bloque legal repetido -->
-          <div class="legal-grid"> <!-- Caja -->
-            <div class="legal-col"><h2>INFORMACIÓN</h2><ul><li><a href="#">Preguntas Frecuentes</a></li><li><a href="#">Cambios y Devoluciones</a></li><li><a href="#">Localizador de Envíos</a></li><li><a href="#">Contacto</a></li></ul></div> <!-- Col 1 -->
-            <div class="legal-col"><h2>LEGAL</h2><ul><li><a href="./privacy.html">Política de Privacidad</a></li><li><a href="#">Política de Envío</a></li><li><a href="#">Términos y Condiciones</a></li><li><a href="#">Política de Reembolso</a></li></ul></div> <!-- Col 2 -->
-          </div> <!-- /legal-grid -->
-        </aside> <!-- /page-legal -->
-      </div> <!-- /page-grid -->
-    </main> <!-- /main -->
+<body> 
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="site-footer"><div class="contenedor"><div class="footer-top"><p class="footer-note">Prueba antes de comprar. Envíos a todo el país.</p><nav class="footer-links"><a href="#">Ayuda</a> <span>·</span> <a href="#">Soporte</a> <span>·</span> <a href="./privacy.html">Privacidad</a></nav></div><div class="footer-bottom"><p>Decanté.com © 2025</p></div></div></footer> <!-- Footer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> <!-- JS Bootstrap -->
-  </body> <!-- /body -->
-</html> <!-- /html -->
+  <!-- HEADER: -->
+  <header class="site-header"> 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"> 
+      <div class="container"> 
+
+        <!-- Marca del sitio con enlace al home -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html"> <!-- Volver al inicio -->
+          <img src="../assets/images/logo-transparente.png" alt="Logo Decanté"
+               width="48" height="48" loading="lazy" decoding="async"> <!-- Dimensiones fijas -->
+          <span class="fw-semibold">Decanté</span> <!-- Nombre de marca -->
+        </a>
+
+        <!-- Botón para abrir/cerrar menú en móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false"
+                aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span> 
+        </button>
+
+        <!-- Contenido del menú principal -->
+        <div class="collapse navbar-collapse" id="navMain"> 
+          <ul class="navbar-nav mx-auto gap-lg-3"> 
+            <li class="nav-item"><a class="nav-link" href="./about.html">Nosotros</a></li> 
+
+            <!-- Catálogo con submenú de filtros -->
+            <li class="nav-item dropdown"> <!-- Grupo catálogo -->
+              <a class="nav-link dropdown-toggle" href="./catalog.html"
+                 role="button" data-bs-toggle="dropdown">Catálogo</a> 
+              <ul class="dropdown-menu"> <!-- Opciones de catálogo -->
+                <li><a class="dropdown-item" href="./catalog.html?g=hombre">Hombre</a></li> 
+                <li><a class="dropdown-item" href="./catalog.html?g=mujer">Mujer</a></li>
+                <li><a class="dropdown-item" href="./catalog.html?g=todos">Todos</a></li> <!-- Ver todos -->
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="./packs.html">Packs</a></li> <!-- Paquetes -->
+            <li class="nav-item"><a class="nav-link" href="./promotions.html">Promociones</a></li> <!-- Ofertas -->
+          </ul>
+
+          <!-- Buscador y accesos rápidos -->
+          <form class="d-flex align-items-center gap-2" role="search" method="get" action="./privacy.html"> <!-- Form de búsqueda -->
+            <input class="form-control" type="search" name="q" placeholder="🔎 Buscar..."
+                   aria-label="Buscar" autocomplete="off"> <!-- Campo de búsqueda -->
+            <button class="btn btn-outline-secondary" type="submit">Buscar</button> <!-- CTA -->
+            <a class="nav-link fs-5" href="#" aria-label="Ingresar o registrarse" title="Ingresar / Registrarse">👤</a> <!-- Cuenta -->
+            <a class="nav-link fs-5" href="./cart.html" aria-label="Carrito" title="Carrito">🛒</a> <!-- Carrito -->
+          </form>
+        </div> 
+      </div> 
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="page" id="main-content"> >
+    <div class="container"> 
+
+      <!-- Título de la página legal -->
+      <header class="page__header text-center mb-4"> <!-- Encabezado de sección -->
+        <h1 class="page__title m-0">Política de Privacidad</h1> 
+        <p class="section__subtitle m-0">Transparencia sobre cómo usamos y protegemos tus datos</p> <!-- Subtítulo -->
+      </header>
+
+      <nav aria-label="Índice de contenidos" class="mb-4">
+        <ul class="list-inline m-0"> 
+          <li class="list-inline-item"><a href="#datos">Datos y finalidades</a></li> 
+          <li class="list-inline-item"><a href="#cookies">Cookies</a></li> 
+          <li class="list-inline-item"><a href="#devoluciones">Devoluciones</a></li> 
+          <li class="list-inline-item"><a href="#terminos">Términos</a></li>
+        </ul>
+      </nav>
+
+      <!-- Sección: datos personales -->
+      <section id="datos" class="section"> <!-- Bloque 1 -->
+        <h2 class="section__title">Datos personales y finalidades</h2> <!-- Título -->
+        <p> <!-- Párrafo -->
+          Recopilamos datos mínimos para procesar compras, enviar notificaciones
+          y brindar soporte. No vendemos tu información a terceros. Podrás
+          solicitar acceso, rectificación o eliminación mediante contacto directo.
+        </p>
+        <p> <!-- Seguridad -->
+          Implementamos medidas técnicas y organizativas para proteger tus datos.
+          Limitamos el acceso internamente y revisamos periódicamente los procesos
+          de seguridad asociados al sitio y a los proveedores utilizados.
+        </p>
+      </section>
+
+      <!-- Sección -->
+      <section id="cookies" class="section"> 
+        <h2 class="section__title">Política de Cookies</h2> <!-- Título -->
+        <p> <!-- Introducción -->
+          Utilizamos cookies para mejorar la experiencia de navegación, analizar
+          el uso del sitio y recordar preferencias. Puedes administrarlas desde
+          la configuración de tu navegador y deshabilitarlas si lo prefieres.
+        </p>
+        <ul> <!-- Tipos de cookies -->
+          <li>Esenciales: necesarias para el funcionamiento básico del sitio.</li> 
+          <li>Analíticas: nos ayudan a entender el uso y mejorar contenidos.</li> 
+          <li>Preferencias: recuerdan idioma u opciones seleccionadas.</li> 
+        </ul>
+      </section>
+
+      <!-- Sección: política de devoluciones -->
+      <section id="devoluciones" class="section"> <!-- Bloque 3 -->
+        <h2 class="section__title">Política de Devoluciones</h2> <!-- Título -->
+        <p> <!-- Aclaración -->
+          Por tratarse de productos fraccionados y de uso personal, no aceptamos
+          devoluciones una vez desprecintado el decant. Si el producto llega dañado
+          o con un error en el pedido, contáctanos dentro de 48 horas para gestionar
+          una reposición o alternativa equivalente.
+        </p>
+      </section>
+
+      <!-- Sección: términos y condiciones generales -->
+      <section id="terminos" class="section"> 
+        <h2 class="section__title">Términos y Condiciones</h2> 
+        <p> <!-- Alcance -->
+          Las condiciones de compra, precios, disponibilidad y promociones pueden
+          variar sin previo aviso. Los contenidos del sitio (textos e imágenes)
+          son de uso informativo y no confieren licencias de marca o autor.
+        </p>
+        <p> <!-- Contacto -->
+          Cualquier duda adicional o ejercicio de derechos relacionados con datos
+          personales puedes canalizarla a <a href="mailto:contacto@decante.com">contacto@decante.com</a>.
+        </p>
+      </section>
+
+      <!-- BLOQUE -->
+      <section class="section section--contact"> <!-- Sección de contacto -->
+        <header class="text-center mb-3"> <!-- Encabezado del bloque -->
+          <h2 class="section__title">¿Necesitas ayuda para elegir?</h2> <!-- Título -->
+          <p class="section__subtitle">Escríbenos por redes o envíanos un mensaje</p> <!-- Subtítulo -->
+        </header>
+
+        
+        <ul class="social-list justify-content-center mb-4" aria-label="Redes Sociales"> <!-- Íconos -->
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="WhatsApp">
+              <img src="../assets/images/whatsapp.png" alt="WhatsApp"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async"> 
+            </a>
+          </li>
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="Facebook">
+              <img src="../assets/images/facebook.png" alt="Facebook"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async"> <!-- Tamaño fijo -->
+            </a>
+          </li>
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="Instagram">
+              <img src="../assets/images/instagram.png" alt="Instagram"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async"> <!-- Tamaño fijo -->
+            </a>
+          </li>
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="TikTok">
+              <img src="../assets/images/tik-tok.png" alt="TikTok"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async"> <!-- Tamaño fijo -->
+            </a>
+          </li>
+          <li>
+            <a class="social-list__link" href="../index.html" aria-label="Correo">
+              <img src="../assets/images/logo-negro.PNG" alt="Correo electrónico"
+                   class="social-list__icon" width="38" height="38"
+                   loading="lazy" decoding="async"> <!-- Tamaño fijo -->
+            </a>
+          </li>
+        </ul>
+
+        <!-- Formulario del index: ahora con required y ayudas de campo -->
+        <form class="contact-form mx-auto" style="max-width:720px;" method="post" action="#" novalidate> <!-- Form placeholder -->
+          <div class="row g-3"> <!-- Fila con espacios -->
+            <div class="col-12 col-md-6"> <!-- Campo nombre -->
+              <label for="name" class="form-label">Nombre</label> <!-- Etiqueta accesible -->
+              <input type="text" class="form-control" id="name" name="name"
+                     placeholder="Tu nombre" required aria-describedby="nameHelp"> <!-- Requerido + ayuda -->
+              <div id="nameHelp" class="form-text">Escribe tu nombre y apellido.</div> <!-- Texto guía -->
+            </div>
+            <div class="col-12 col-md-6"> <!-- Campo correo -->
+              <label for="email" class="form-label">Correo</label> <!-- Etiqueta -->
+              <input type="email" class="form-control" id="email" name="email"
+                     placeholder="tu@correo.com" required aria-describedby="emailHelp"> 
+              <div id="emailHelp" class="form-text">Usaremos tu correo solo para responderte.</div> <!-- Texto guía -->
+            </div>
+            <div class="col-12"> <!-- Campo mensaje -->
+              <label for="message" class="form-label">Mensaje</label> <!-- Etiqueta -->
+              <textarea class="form-control" id="message" name="message" rows="4"
+                        placeholder="¿En qué te ayudamos?" required aria-describedby="msgHelp"></textarea> 
+              <div id="msgHelp" class="form-text">Cuéntanos brevemente tu consulta.</div> <!-- Texto guía -->
+            </div>
+            <div class="col-12 text-end"> <!-- Botón de envío -->
+              <button class="btn btn-primary" type="submit">Enviar</button> <!-- CTA -->
+            </div>
+          </div>
+        </form>
+      </section>
+    </div> 
+  </main> 
+
+  <!-- FOOTER -->
+  <footer class="footer"> <!-- Pie del sitio -->
+    <div class="container"> <!-- Contenedor del pie -->
+      <div class="footer__cols"> <!-- Columnas de links -->
+        <section class="footer__col"> 
+          <h2 class="h6 text-uppercase mb-3">Información</h2> 
+          <ul class="list-unstyled m-0"> <!-- Lista simple -->
+            <li><a class="footer__link" href="./about.html">Sobre Nosotros</a></li>
+            <li><a class="footer__link" href="./catalog.html">Catálogo</a></li>
+            <li><a class="footer__link" href="./packs.html">Packs</a></li>
+            <li><a class="footer__link" href="./promotions.html">Promociones</a></li>
+            <li><a class="footer__link" href="./cart.html">Carrito</a></li>
+          </ul>
+        </section>
+
+        <section class="footer__col"> <!-- Columna legal -->
+          <h2 class="h6 text-uppercase mb-3">Legal</h2> <!-- Título -->
+          <ul class="list-unstyled m-0"> <!-- Subenlaces legales -->
+            <li><a class="footer__link" href="./privacy.html">Política de Privacidad</a></li>
+            <li><a class="footer__link" href="./privacy.html#cookies">Política de Cookies</a></li>
+            <li><a class="footer__link" href="./privacy.html#devoluciones">Política de Devoluciones</a></li>
+            <li><a class="footer__link" href="./privacy.html#terminos">Términos y Condiciones</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="text-center small m-0 pt-3">Decanté.com © 2025 - Todos los derechos reservados.</p> 
+    </div> 
+  </footer> 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
