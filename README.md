@@ -48,3 +48,27 @@ Implementa `media queries` personalizadas, uso de `grid-auto-flow` para carrusel
 
 ## 🧱 Estructura del proyecto
 
+/assets
+/images
+/css
+  styles.css
+/sass
+  style.scss
+  /base
+    _reset.scss
+  /layout
+    _home.scss
+  /utilities
+    _mixin.scss
+    _extend.scss
+    _animations.scss
+    _variables.scss
+/pages
+  about.html
+  catalog.html
+  packs.html
+  promotions.html
+  cart.html
+  privacy.html
+  index.html
+
